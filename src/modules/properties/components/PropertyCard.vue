@@ -18,7 +18,7 @@
       <span>{{ property.rating }}</span>
     </div>
 
-    <h3 class="title">{{ property.name }}</h3>
+    <h1 class="title">{{ property.name }}</h1>
 
     <p class="type">Hotel</p>
 
@@ -58,8 +58,8 @@ const goToDetail = () => {
 <style scoped>
 
 .card{
-width:341px;
-height:315px;
+width:317px;
+height:320px;
 background:#FFFFFF;
 border-radius:20px;
 flex-shrink:0;
@@ -71,9 +71,10 @@ position:relative;
 }
 
 .image-container img{
-width:341px;
-height:169.85px;
+width:317px;
+height:150px;
 object-fit:cover;
+border-radius: 20px 20px 0px 0px;
 }
 
 .arrow{
@@ -84,24 +85,18 @@ width:20px;
 cursor:pointer;
 }
 
-.left{
-left:2px;
-}
-
-.right{
-right:2px;
-}
 
 .card-body{
-padding:12px 16px;
+padding:5px 18px;
 }
 
 .rating{
 display:flex;
 align-items:center;
 gap:6px;
-font-size:14px;
-color:#6A6A8A;
+font-size:10px;
+font-family: 'Gotham-Rounded-Light';
+color:#7A73B7;
 }
 
 .star{
@@ -109,24 +104,27 @@ width:16px;
 }
 
 .title{
-font-size:22px;
-font-weight:600;
-color:#1B2A4E;
-margin:4px 0;
+font-size:20px;
+font-weight:700;
+color:#484769;
+font-family: 'Gotham-Rounded-Book';
+margin:7px 0;
 }
 
 .type{
-font-size:14px;
-color:#8A8AA0;
-margin-bottom:4px;
+font-size:12px;
+color:#7A73B7;
+font-family: 'Gotham-Rounded-Light';
+margin-bottom:3px;
 }
 
 .location{
 display:flex;
 align-items:center;
 gap:6px;
-font-size:14px;
-color:#2F80ED;
+font-family: 'Gotham-Rounded-Book';
+font-size:12px;
+color:#0177FF;
 }
 
 .location img{
@@ -134,15 +132,17 @@ width:16px;
 }
 
 .price{
-font-size:24px;
+font-size:13px;
 font-weight:700;
+font-family: 'Gotham-Rounded-Book';
 color:#5A5A8A;
 margin-top:6px;
 }
 
 .info{
-font-size:14px;
-color:#8A8AA0;
+font-size:13px;
+font-family: 'Gotham-Rounded-Light';
+color:#7A73B7;
 }
 
 </style>
