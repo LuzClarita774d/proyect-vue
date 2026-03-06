@@ -6,6 +6,8 @@
 
 <style scoped>
 .footer {
+  font-family: 'WorkSans';
+  font-weight: 300;
   margin-top: 40px;
   padding: 20px;
   text-align: center;

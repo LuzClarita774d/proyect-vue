@@ -1,73 +1,68 @@
 <template>
-  <header class="header">
-    <div class="logo">
-      <router-link to="/">TRAVEL & LIVE</router-link>
-    </div>
+  
+    <header class="header">
 
-    <div class="nav-center">
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar destinos" />
-        <input type="text" placeholder="Fechas" />
-        <input type="text" placeholder="Huéspedes" />
-        <div class="search">
-        <img src="@/assets/imagenes/logos/casita.png" alt="Logo Casita" class="casita" />
+      <div class="logo">
+       <router-link to="/"><img src="@/assets/imagenes/logos/logo.svg" alt="logo"></router-link>
       </div>
-      </div>
-    </div>
 
-    <div class="nav-right">
-      <button class="host-btn">Conviértete en anfitrión</button>
-    </div>
-  </header>
+      <div class="iconos">
+        <div class="idiomas">
+          MXN
+          <img src="@/assets/imagenes/logos/Vector.svg" alt="">
+        </div>
+        <img class="usuario" src="@/assets/imagenes/logos/usuario.svg" alt="usuario">
+        <img class="menu" src="@/assets/imagenes/logos/hamburguesa.svg" alt="menu">
+      </div>
+    </header>
 </template>
 
+   
+
+
+<script>
+export default {
+  name: "Header"
+}
+</script>
+
+
 <style scoped>
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  border-bottom: 1px solid #eee;
-  background: white;
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  border-bottom:1px solid #eee;
+  background:#ffffff;
 }
 
-.logo a {
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
-  color: #ff385c;
+.logo img{
+ 
 }
 
-.search-bar {
-  display: flex;
-  background: #f7f7f7;
-  border-radius: 30px;
-  padding: 5px;
-  gap: 10px;
+.iconos{
+  display:flex;
+  align-items:center;
+  gap:20px;
 }
 
-.search-bar input {
-  border: none;
-  background: transparent;
-  padding: 8px;
-  outline: none;
+.idiomas{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-family:"Gotham Rounded Medium";
+  color:#374564;
+  cursor:pointer;
 }
 
-.search-bar button {
-
-  border: none;
-  cursor: pointer;
+.usuario{
+  width:24px;
 }
 
-.casita{
-  width: 32px;
-  height: auto;
-  object-fit: contain;
+.menu{
+  width:24px;
 }
-.host-btn {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-weight: 500;
-}
+
 </style>

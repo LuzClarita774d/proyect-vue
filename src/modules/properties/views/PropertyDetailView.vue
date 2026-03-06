@@ -6,6 +6,7 @@
       <h1>{{ property.title }}</h1>
       <p>{{ property.city }}</p>
       <p>${{ property.price }} MXN por noche</p>
+     
     </div>
   </div>
 </template>
