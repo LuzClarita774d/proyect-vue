@@ -1,13 +1,29 @@
-import properties from '../data/properties'
+import { properties } from "../data/properties"
 
-export default {
+export function searchProperties(filters) {
 
-  getAll(){
-    return properties
-  },
+  return properties.filter(property => {
 
-  getById(id){
-    return properties.find(p => p.id === Number(id))
-  }
+    const destination = filters.destination?.toLowerCase() || ""
 
+    const destinationMatch =
+      !destination ||
+      property.city.toLowerCase().includes(destination) ||
+      property.location.toLowerCase().includes(destination)
+
+    const guestsMatch =
+      property.maxGuests >= filters.guests
+
+    const dateMatch =
+      !filters.checkIn ||
+      !filters.checkOut ||
+      property.availability.some(range => {
+        return (
+          filters.checkIn >= range.from &&
+          filters.checkOut <= range.to
+        )
+      })
+
+    return destinationMatch && guestsMatch && dateMatch
+  })
 }

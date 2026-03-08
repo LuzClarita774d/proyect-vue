@@ -9,30 +9,26 @@
   </div>
 
   <!-- BUSCADOR -->
+
   <div class="search-box">
 
-    <div class="search-item">
-      <img src="@/assets/imagenes/logos/vector.svg">
-      <span>Buscar destinos</span>
-    </div>
+    <DestinationInput v-model="destination"/>
 
-    <div class="search-item">
-      <img src="@/assets/imagenes/logos/calendario.svg">
-      <span>Disponibilidad</span>
-    </div>
+    <DatePicker
+      v-model:checkIn="checkIn"
+      v-model:checkOut="checkOut"
+    />
 
-    <div class="search-item">
-      <img src="@/assets/imagenes/logos/usuarioicon.svg">
-      <span>Huéspedes</span>
-    </div>
+    <GuestsSelector v-model="guests"/>
 
-    <div class="search-button">
+    <div class="search-button" @click="search">
       <img src="@/assets/imagenes/logos/lupa.svg">
     </div>
 
   </div>
 
   <div class="iconos">
+
     <div class="idiomas">
       MXN
       <img src="@/assets/imagenes/logos/Vector.svg">
@@ -40,11 +36,46 @@
 
     <img class="usuario" src="@/assets/imagenes/logos/usuario.svg">
     <img class="menu" src="@/assets/imagenes/logos/hamburguesa.svg">
+
   </div>
 
 </header>
 
 </template>
+
+
+<script setup>
+
+import { ref } from "vue"
+import { useRouter } from "vue-router"
+
+import DestinationInput from "@/modules/properties/components/search/DestinationInput.vue"
+import DatePicker from "@/modules/properties/components/search/DatePicker.vue"
+import GuestsSelector from "@/modules/properties/components/search/GuestsSelector.vue"
+
+const router = useRouter()
+
+const destination = ref("")
+const checkIn = ref("")
+const checkOut = ref("")
+const guests = ref(1)
+
+function search(){
+
+router.push({
+  name:"results",
+  query:{
+    destination: destination.value,
+    checkIn: checkIn.value,
+    checkOut: checkOut.value,
+    guests: guests.value
+  }
+})
+
+}
+
+</script>
+
 
 <style scoped>
 
@@ -52,7 +83,7 @@
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:15px 40px;
+padding: 22px 18px;
 border-bottom:1px solid #eee;
 background:white;
 }

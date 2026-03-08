@@ -27,6 +27,16 @@
 
 }
 
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('@/assets/fonts/Montserrat-Light.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('@/assets/fonts/Montserrat-Medium.ttf') format('truetype');
+
+}
 
 
 @font-face {
@@ -37,6 +47,7 @@
 
 body{
     background-color: #F4F5FA;
+    margin:0;
 }
 
 

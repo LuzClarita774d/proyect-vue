@@ -4,15 +4,15 @@
 
   <section class="home">
 
-    <!-- RECORRE CIUDADES -->
+    <!-- SOLO 6 CIUDADES -->
     <div
-      v-for="(cityProperties, city) in propertiesByCity"
+      v-for="(cityProperties, city) in limitedCities"
       :key="city"
       class="city-section"
     >
 
       <h2 class="title">
-        Alojamientos en {{ city }}
+        Alojamientos populares en {{ city }}
       </h2>
 
       <!-- CARRUSEL -->
@@ -21,8 +21,8 @@
         <div class="carousel-track">
 
           <PropertyCard
-            v-for="(property, index) in repeatCards(cityProperties)"
-            :key="property.id + '-' + index"
+            v-for="property in cityProperties"
+            :key="property.id"
             :property="property"
           />
 
@@ -43,9 +43,10 @@ import { ref, computed } from 'vue'
 
 import Hero from '@/layout/Headerprincipal.vue'
 import PropertyCard from '../components/PropertyCard.vue'
-import propertyService from '../services/propertyService'
 
-const properties = ref(propertyService.getAll())
+import { properties as propertiesData } from '../data/properties'
+
+const properties = ref(propertiesData)
 
 /* AGRUPAR POR CIUDAD */
 
@@ -63,20 +64,27 @@ const propertiesByCity = computed(() => {
 
   })
 
+  /* ORDENAR CADA CIUDAD POR RATING */
+
+  Object.keys(grouped).forEach(city => {
+
+    grouped[city].sort((a, b) => b.rating - a.rating)
+
+  })
+
   return grouped
 
 })
 
+/* LIMITAR A 6 CIUDADES */
 
-/* DUPLICAR SI HAY POCAS */
+const limitedCities = computed(() => {
 
-const repeatCards = (list) => {
+  const entries = Object.entries(propertiesByCity.value)
 
-  if (list.length >= 8) return list
+  return Object.fromEntries(entries.slice(0, 6))
 
-  return [...list, ...list, ...list, ...list]
-
-}
+})
 
 </script>
 
@@ -84,37 +92,31 @@ const repeatCards = (list) => {
 <style scoped>
 
 .home{
-  padding:40px 80px;
+  padding:160px 80px 40px 80px;
 }
-
 
 /* SECCION POR CIUDAD */
 
 .city-section{
-  margin-bottom:60px;
+  margin-bottom:70px;
 }
-
 
 /* TITULO */
 
 .title{
   font-size:28px;
   font-weight:600;
-  margin-bottom:20px;
+  margin-bottom:25px;
+  font-family:'Montserrat-SemiBold';
+  color:#48427B;
 }
-
 
 /* CONTENEDOR CARRUSEL */
 
 .carousel{
-
   overflow-x:auto;
   scroll-behavior:smooth;
-
-  scroll-snap-type:x mandatory;
-
 }
-
 
 /* OCULTAR SCROLLBAR */
 
@@ -122,26 +124,17 @@ const repeatCards = (list) => {
   display:none;
 }
 
-
 /* FILA DE CARDS */
 
 .carousel-track{
-
   display:flex;
-
   gap:24px;
-
-  width:max-content;
-
 }
 
-
-/* SNAP DE CARD */
+/* CARD SIZE (4 COLUMNAS) */
 
 .carousel-track > *{
-
-  scroll-snap-align:start;
-
+  flex:0 0 calc(25% - 18px);
 }
 
 </style>

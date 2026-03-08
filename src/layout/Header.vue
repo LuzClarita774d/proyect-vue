@@ -7,11 +7,10 @@
       </div>
 
       <div class="iconos">
-        <div class="idiomas">
-          MXN
-          <img src="@/assets/imagenes/logos/Vector.svg" alt="">
+        <div class="alfitrion">
+          Convierte en alfitrión
         </div>
-        <img class="usuario" src="@/assets/imagenes/logos/usuario.svg" alt="usuario">
+       
         <img class="menu" src="@/assets/imagenes/logos/hamburguesa.svg" alt="menu">
       </div>
     </header>
@@ -33,14 +32,12 @@ export default {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 40px;
+  padding: 22px 30px;
   border-bottom:1px solid #eee;
   background:#ffffff;
 }
 
-.logo img{
- 
-}
+
 
 .iconos{
   display:flex;
@@ -48,21 +45,21 @@ export default {
   gap:20px;
 }
 
-.idiomas{
+.alfitrion
+{
   display:flex;
   align-items:center;
   gap:6px;
-  font-family:"Gotham Rounded Medium";
+  font-size: 15px;
+ font-family: 'Gotham-Rounded-Book';
   color:#374564;
   cursor:pointer;
-}
-
-.usuario{
-  width:24px;
 }
 
 .menu{
   width:24px;
 }
+
+
 
 </style>

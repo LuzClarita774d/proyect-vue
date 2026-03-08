@@ -14,7 +14,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
-import propertyService from '../services/propertyService'
+
 
 const route = useRoute()
 const property = ref(propertyService.getById(route.params.id))

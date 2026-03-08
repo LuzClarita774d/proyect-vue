@@ -4,53 +4,21 @@
 
   <div class="imagen-hero">
 
-    <img src="@/assets/imagenes/properties/casa1.png" alt="casa">
+    <img src="@/assets/imagenes/properties/casa2.jpg">
 
-    <!-- CAJA BUSCADOR -->
     <div class="caja-buscador">
 
-      <!-- DESTINO -->
-      <div class="item-busqueda">
+      <DestinationInput v-model="destination"/>
 
-        <p>Destino</p>
+      <DatePicker
+        v-model:checkIn="checkIn"
+        v-model:checkOut="checkOut"
+      />
 
-        <div class="input-busqueda">
-          <img class="icono" src="@/assets/imagenes/logos/flechas.svg">
-          <span>Buscar destinos</span>
-        </div>
+      <GuestsSelector v-model="guests"/>
 
-      </div>
-
-
-      <!-- FECHAS -->
-      <div class="item-busqueda">
-
-        <p>Fechas</p>
-
-        <div class="input-busqueda pequeno">
-          <img class="icono" src="@/assets/imagenes/logos/calendario.svg">
-          <span>Disponibilidad</span>
-        </div>
-
-      </div>
-
-
-      <!-- HUESPEDES -->
-      <div class="item-busqueda">
-
-        <p>Huéspedes</p>
-
-        <div class="input-busqueda mediano">
-          <img class="icono" src="@/assets/imagenes/logos/usuarioicon.svg">
-          <span>Huéspedes</span>
-        </div>
-
-      </div>
-
-
-      <!-- BOTON BUSCAR -->
-      <div class="boton-buscar">
-        <img class="icono" src="@/assets/imagenes/logos/lupa.svg">
+      <div class="boton-buscar" @click="search">
+        <img src="@/assets/imagenes/logos/lupa.svg">
       </div>
 
     </div>
@@ -62,11 +30,17 @@
 </template>
 
 
-<script>
-export default {
-  name: "Hero"
-}
-</script>
+<script setup> import { ref } from "vue" 
+import { useRouter } from "vue-router" 
+import DestinationInput from "@/modules/properties/components/search/DestinationInput.vue" 
+import DatePicker from "@/modules/properties/components/search/DatePicker.vue" 
+import GuestsSelector from "@/modules/properties/components/search/GuestsSelector.vue" 
+const router = useRouter() 
+const destination = ref("") 
+const checkIn = ref("") 
+const checkOut = ref("") 
+const guests = ref(1) 
+function search(){ router.push({ name:"results", query:{ destination: destination.value, checkIn: checkIn.value, checkOut: checkOut.value, guests: guests.value } }) } </script>
 
 
 <style scoped>
@@ -74,7 +48,7 @@ export default {
 /* CONTENEDOR HERO */
 
 .imagen-hero{
-  width:1500px;
+  width:100%;
   height:405px;
   position:relative;
 }
@@ -84,93 +58,55 @@ export default {
   height:100%;
   object-fit:cover;
   border-radius:0 0 40px 40px;
+  display:block;
 }
-
-
-/* CAJA BUSCADOR */
 
 .caja-buscador{
-  position:absolute;
-  bottom:-70px;
-  left:50%;
-  transform:translateX(-50%);
 
-  width:1053px;
-  height:153.47px;
+position:absolute;
+bottom:-70px;
+left:50%;
+transform:translateX(-50%);
 
-  background:#F2F8FF;
-  border-radius:20px;
+display:flex;
+align-items:center;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:20px;
+background:white;
+border-radius:40px;
 
-  box-shadow:0 4px 10px rgba(0,63,156,0.12);
+padding:10px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+
+width:900px;
+gap:10px;
+
 }
-
-
-/* TITULO DE CADA CAMPO */
-
-.item-busqueda p{
-  font-family:'Gotham-Rounded-Book';
-  font-size:12px;
-  color:#374564;
-  margin-bottom:8px;
-}
-
-
-/* INPUT BUSCADOR */
-
-.input-busqueda{
-  width:347px;
-  height:48.1px;
-  background:white;
-  border-radius:10px;
-
-  display:flex;
-  align-items:center;
-  gap:10px;
-
-  padding:0 15px;
-
-  font-family:'Exo-Medium';
-  color:#6A63A1;
-}
-
-.input-busqueda.pequeno{
-  width:215px;
-}
-
-.input-busqueda.mediano{
-  width:223px;
-}
-
-
-.input-busqueda img{
-  width:18px;
-  object-fit:contain;
-}
-/* BOTON BUSCAR */
 
 .boton-buscar{
-  margin-top: 30px;
-  width:45px;
-  height:45px;
 
-  background:white;
-  border-radius:50%;
+width:50px;
+height:50px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+background:#e3e3e3;
+border-radius:50%;
 
-  cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+
+cursor:pointer;
+transition:.2s;
+
 }
 
-.boton-buscar img {
-  width:25px;
-  height: 25px;
+.boton-buscar img{
+width:20px;
+height: 20px;
+
 }
 
+.boton-buscar:hover{
+transform:scale(1.08);
+}
 </style>
