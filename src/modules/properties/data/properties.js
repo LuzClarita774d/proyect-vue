@@ -836,7 +836,7 @@ export const properties = [
     "maxGuests": 4,
     "availability": [{ "from": "2026-05-05", "to": "2026-05-18" }],
     "images": ["https://images.unsplash.com/photo-1523217582562-09d0def993a6"],
-    "description": "Residencia con jardín exuberante y azotea con vista a la parroquia.",
+    "description": "Residencia con jar  dín exuberante y azotea con vista a la parroquia.",
     "amenities": ["Jacuzzi", "Fire pit", "Seguridad"]
   },
   {

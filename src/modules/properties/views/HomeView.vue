@@ -42,7 +42,7 @@
 import { ref, computed } from 'vue'
 
 import Hero from '@/layout/Headerprincipal.vue'
-import PropertyCard from '../components/PropertyCard.vue'
+import PropertyCard from '@/modules/properties/components/ui/PropertyCard.vue'
 
 import { properties as propertiesData } from '../data/properties'
 
@@ -133,8 +133,6 @@ const limitedCities = computed(() => {
 
 /* CARD SIZE (4 COLUMNAS) */
 
-.carousel-track > *{
-  flex:0 0 calc(25% - 18px);
-}
+
 
 </style>

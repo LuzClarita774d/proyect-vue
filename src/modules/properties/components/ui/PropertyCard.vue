@@ -76,7 +76,7 @@ const nights = computed(() => {
 <style scoped>
 
 .card{
-width:322px;
+width:320px;
 height:350px;
 background:#FFFFFF;
 border-radius:20px;
@@ -89,7 +89,7 @@ position:relative;
 }
 
 .image-container img{
-width:322px;
+width:320px;
 height:150px;
 object-fit:cover;
 border-radius:20px 20px 0px 0px;

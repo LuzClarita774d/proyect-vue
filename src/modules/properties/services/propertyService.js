@@ -1,29 +1,55 @@
 import { properties } from "../data/properties"
 
-export function searchProperties(filters) {
+export function searchProperties(filters){
 
-  return properties.filter(property => {
+return properties.filter(property => {
 
-    const destination = filters.destination?.toLowerCase() || ""
+const destination = filters.destination?.toLowerCase() || ""
 
-    const destinationMatch =
-      !destination ||
-      property.city.toLowerCase().includes(destination) ||
-      property.location.toLowerCase().includes(destination)
+/* DESTINO */
 
-    const guestsMatch =
-      property.maxGuests >= filters.guests
+const destinationMatch =
+!destination ||
+property.city.toLowerCase().includes(destination) ||
+property.location.toLowerCase().includes(destination)
 
-    const dateMatch =
-      !filters.checkIn ||
-      !filters.checkOut ||
-      property.availability.some(range => {
-        return (
-          filters.checkIn >= range.from &&
-          filters.checkOut <= range.to
-        )
-      })
+/* HUESPEDES */
 
-    return destinationMatch && guestsMatch && dateMatch
-  })
+const guestsMatch =
+property.maxGuests >= filters.guests
+
+/* FECHAS */
+
+let dateMatch = true
+
+if(filters.checkIn && filters.checkOut){
+
+const start = new Date(filters.checkIn)
+const end = new Date(filters.checkOut)
+
+const nights =
+Math.ceil((end - start) / (1000 * 60 * 60 * 24))
+
+dateMatch = property.availability.some(range => {
+
+const availableStart = new Date(range.from)
+const availableEnd = new Date(range.to)
+
+const withinRange =
+start >= availableStart &&
+end <= availableEnd
+
+const enoughNights =
+(availableEnd - availableStart) / (1000 * 60 * 60 * 24) >= nights
+
+return withinRange && enoughNights
+
+})
+
+}
+
+return destinationMatch && guestsMatch && dateMatch
+
+})
+
 }
