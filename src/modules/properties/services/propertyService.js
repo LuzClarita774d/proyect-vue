@@ -1,5 +1,13 @@
 import { properties } from "../data/properties"
 
+/* OBTENER PROPIEDAD POR ID */
+
+export function getPropertyById(id){
+  return properties.find(property => property.id == id)
+}
+
+/* BUSQUEDA DE PROPIEDADES */
+
 export function searchProperties(filters){
 
 return properties.filter(property => {

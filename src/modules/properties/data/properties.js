@@ -15,7 +15,7 @@ export const properties = [
     "description": "Antigua hacienda colonial con jardines exóticos y elegancia rústica.",
     "amenities": ["Spa", "Restaurante Gourmet", "Cava de Vinos"]
   },
-  {
+{
     "id": 3,
     "rating": 4.7,
     "name": "Loft Histórico Puebla",
@@ -23,14 +23,25 @@ export const properties = [
     "location": "Puebla",
     "type": "departamento",
     "price": 2200,
-    "maxGuests": 3,
+    "maxGuests": 4,
+    "Habitaciones": 3,
+    "Baños": 2,
     "availability": [
-      { "from": "2026-05-01", "to": "2026-05-10" }
+      { "from": "2026-03-01", "to": "2026-05-10" }
     ],
-    "images": ["https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"],
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+      "https://images.unsplash.com/photo-1560448204-603b3fc33ddc",
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      " https://images.unsplash.com/photo-1571896349842-33c89424de2d ",
+      "https://images.unsplash.com/photo-1499916078039-922301b0eb9b"
+    ],
     "description": "Departamento moderno con techos altos en el centro histórico.",
     "amenities": ["Cocina equipada", "Wifi de alta velocidad", "Balcón"]
-  },
+},
   {
     "id": 4,
     "rating": 4.9,
@@ -834,7 +845,7 @@ export const properties = [
     "type": "casa",
     "price": 8500,
     "maxGuests": 4,
-    "availability": [{ "from": "2026-05-05", "to": "2026-05-18" }],
+    "availability": [{ "from": "2026-03-05", "to": "2026-05-18" }],
     "images": ["https://images.unsplash.com/photo-1523217582562-09d0def993a6"],
     "description": "Residencia con jar  dín exuberante y azotea con vista a la parroquia.",
     "amenities": ["Jacuzzi", "Fire pit", "Seguridad"]
@@ -917,8 +928,8 @@ export const properties = [
     "location": "Baja California Sur",
     "type": "hotel",
     "price": 14200,
-    "maxGuests": 4,
-    "availability": [{ "from": "2026-08-10", "to": "2026-08-25" }],
+    "maxGuests": 6,
+    "availability": [{ "from": "2026-03-10", "to": "2026-08-25" }],
     "images": ["https://images.unsplash.com/photo-1571896349842-33c89424de2d"],
     "description": "Servicio de clase mundial con acceso privado a la bahía.",
     "amenities": ["Spa", "Club de Niños", "Cancha de Tenis"]

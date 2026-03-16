@@ -13,11 +13,13 @@ const cities = [...new Set(properties.map(p => p.city))]
 
 const filtered = computed(()=>{
 
-if(!search.value) return cities
+if(!search.value) return cities.slice(0,10)
 
-return cities.filter(c =>
+return cities
+.filter(c =>
 c.toLowerCase().includes(search.value.toLowerCase())
 )
+.slice(0,10)
 
 })
 
@@ -29,11 +31,15 @@ open.value = false
 
 }
 
+
+
+
 </script>
+
 
 <template>
 
-<div class="campo">
+<div class="campo" @mouseenter="open=true" @mouseleave="open=false">
 
 <label>Destino</label>
 
@@ -41,9 +47,16 @@ open.value = false
 v-model="search"
 placeholder="¿A dónde vas?"
 @focus="open=true"
+@blur="closeDropdown"
 />
 
 <div v-if="open" class="dropdown">
+
+<div class="suggest">
+Destinos sugeridos
+</div>
+
+<div class="list">
 
 <div
 v-for="city in filtered"
@@ -51,8 +64,8 @@ v-for="city in filtered"
 class="item"
 @click="selectCity(city)"
 >
-
-{{ city }}
+📍 {{ city }}
+</div>
 
 </div>
 
@@ -62,42 +75,85 @@ class="item"
 
 </template>
 
-<style scoped>
 
+<style scoped>
 .campo{
 display:flex;
 flex-direction:column;
-padding:10px 18px;
-border-right:1px solid #eee;
-width:240px;
+padding:14px 22px;
+border-right:1px solid #e5e5e5;
+width:260px;
 position:relative;
+font-family:'Poppins-Regular';
+transition:all .25s ease;
+opacity:.75;
+
 }
 
-input{
+.campo:hover{
+background:#f2f2f2;
+border-radius:40px;
+opacity:1;
+}
+
+.campo label{
+font-size:14px;
+color:#111;
+}
+
+.campo input{
 border:none;
 outline:none;
-font-size:14px;
-color:#555;
-font-family:'Gotham-Rounded-Book';
+font-size:15px;
+font-family:'Poppins-Regular';
+color:#111;
+background:transparent;
 }
 
 .dropdown{
 position:absolute;
-top:70px;
+top:75px;
 left:0;
-width:240px;
+width:260px;
 background:white;
+border-radius:16px;
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+padding:10px 0;
+z-index:9999;
+
+
+overflow:hidden; 
+}
+
+.list{
+max-height:220px;
+overflow-y:auto;
+}
+
+.list::-webkit-scrollbar{
+width:6px;
+}
+
+.list::-webkit-scrollbar-thumb{
+background:#ccc;
 border-radius:10px;
-box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.suggest{
+font-size:12px;
+color:#666;
+padding:10px 15px;
 }
 
 .item{
-padding:10px;
+padding:12px 15px;
 cursor:pointer;
+transition:.2s;
+color:#222;
 }
 
 .item:hover{
-background:#f5f5f5;
+background:#f2f2f2;
 }
 
 </style>

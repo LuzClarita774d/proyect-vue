@@ -1,8 +1,3 @@
-@font-face {
-  font-family: 'Exo-Medium';
-  src: url('@/assets/fonts/Exo-Medium.ttf') format('truetype');
-  
-}
 
 @font-face {
   font-family: 'Gotham-Rounded-Bold';
@@ -19,31 +14,33 @@
   src: url('@/assets/fonts/Gotham-Rounded-Medium.ttf') format('truetype');
 
 }
-
-
-@font-face {
-  font-family: 'Montserrat-SemiBold';
-  src: url('@/assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
-
-}
-
-@font-face {
-  font-family: 'Montserrat-Light';
-  src: url('@/assets/fonts/Montserrat-Light.ttf') format('truetype');
-
-}
-@font-face {
-  font-family: 'Montserrat-Medium';
-  src: url('@/assets/fonts/Montserrat-Medium.ttf') format('truetype');
-
-}
-
-
 @font-face {
   font-family: 'Gotham-Rounded-Light';
   src: url('@/assets/fonts/Gotham-Rounded-Light.ttf') format('truetype');
 
 }
+
+@font-face {
+  font-family: 'Poppins-Light';
+  src: url('@/assets/fonts/Poppins-Light.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('@/assets/fonts/Poppins-Regular.ttf') format('truetype');
+
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('@/assets/fonts/Poppins-Medium.ttf') format('truetype');
+
+}
+
+
+
+
 
 body{
     background-color: #F4F5FA;

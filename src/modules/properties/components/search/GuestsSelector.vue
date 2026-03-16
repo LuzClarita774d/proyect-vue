@@ -1,6 +1,5 @@
 <script setup>
-
-import { ref } from "vue"
+import { ref, computed } from "vue"
 
 const props = defineProps(["modelValue"])
 const emit = defineEmits(["update:modelValue"])
@@ -11,8 +10,20 @@ const adults = ref(1)
 const kids = ref(0)
 const babies = ref(0)
 
+
+const totalGuests = computed(() => adults.value + kids.value)
+
+
+const guestText = computed(() => {
+  if(totalGuests.value === 1){
+    return "1 huésped"
+  }else{
+    return totalGuests.value + " huéspedes"
+  }
+})
+
 function update(){
-  emit("update:modelValue", adults.value + kids.value)
+  emit("update:modelValue", totalGuests.value)
 }
 
 function addAdults(){
@@ -48,23 +59,24 @@ function minusBabies(){
     babies.value--
   }
 }
-
 </script>
-
 
 <template>
 
-<div class="campo" @click="open = !open">
+<div class="campo" @mouseenter="open=true" @mouseleave="open=false">
 
 <label>Huéspedes</label>
 
 <div class="texto">
-{{ adults + kids }} huéspedes
+{{ guestText }}
 </div>
 
-<div v-if="open" class="panel">
-
-<!-- ADULTOS -->
+<div 
+v-if="open" 
+class="panel"
+@mouseenter="open=true"
+@mouseleave="open=false"
+>
 
 <div class="fila">
 
@@ -74,16 +86,12 @@ function minusBabies(){
 </div>
 
 <div class="contador">
-
 <button @click.stop="minusAdults">-</button>
 <span>{{ adults }}</span>
 <button @click.stop="addAdults">+</button>
-
 </div>
 
 </div>
-
-<!-- NIÑOS -->
 
 <div class="fila">
 
@@ -93,30 +101,24 @@ function minusBabies(){
 </div>
 
 <div class="contador">
-
 <button @click.stop="minusKids">-</button>
 <span>{{ kids }}</span>
 <button @click.stop="addKids">+</button>
-
 </div>
 
 </div>
-
-<!-- BEBES -->
 
 <div class="fila">
 
 <div>
 <strong>Bebés</strong>
-<p>Menos de 2</p>
+<p>Menos de 2 años</p>
 </div>
 
 <div class="contador">
-
 <button @click.stop="minusBabies">-</button>
 <span>{{ babies }}</span>
 <button @click.stop="addBabies">+</button>
-
 </div>
 
 </div>
@@ -127,68 +129,85 @@ function minusBabies(){
 
 </template>
 
-
 <style scoped>
 
 .campo{
 display:flex;
 flex-direction:column;
-padding:10px 18px;
-width:200px;
+padding:14px 22px;
+width:220px;
 cursor:pointer;
 position:relative;
+
+transition:.25s;
+opacity:.75;
+
 }
 
 .campo:hover{
-background:#f7f7f7;
-border-radius:30px;
+background:#f2f2f2;
+border-radius:40px;
+opacity:1;
 }
 
-label{
-font-size:12px;
-font-weight:600;
-font-family:'Gotham-Rounded-Book';
+.campo label{
+font-size:14px;
+font-family:'Poppins-Regular';
 }
 
 .texto{
-font-size:14px;
-color:#555;
-font-family:'Gotham-Rounded-Book';
+font-size:15px;
+color:#969393;
+ font-family:'Poppins-Regular';
 }
 
 .panel{
 position:absolute;
-top:70px;
+top:75px;
 left:0;
-background:#ffffff;
+background:white;
 border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,0.15);
-padding:20px;
-width:320px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+padding:25px;
+width:330px;
+
+z-index:9999;
 }
 
 .fila{
 display:flex;
 justify-content:space-between;
 align-items:center;
-font-family:'Gotham-Rounded-Book';
 font-size:14px;
+
 margin-bottom:15px;
 }
+
+ strong{
+  font-family:'Poppins-Regular';
+}
+
 
 .contador{
 display:flex;
 gap:10px;
+ font-family:'Poppins-Regular';
 align-items:center;
 }
 
 button{
-width:30px;
-height:30px;
+width:32px;
+height:32px;
 border-radius:50%;
-border:1px solid #ccc;
-background:#e3e3e3;
+border:1px solid #ddd;
+background:white;
 cursor:pointer;
+font-size:18px;
+transition:.2s;
+}
+
+button:hover{
+background:#f2f2f2;
 }
 
 </style>
