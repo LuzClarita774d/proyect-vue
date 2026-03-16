@@ -138,10 +138,8 @@ padding:14px 22px;
 width:220px;
 cursor:pointer;
 position:relative;
-
-transition:.25s;
 opacity:.75;
-
+transition:.25s;
 }
 
 .campo:hover{

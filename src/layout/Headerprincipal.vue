@@ -9,19 +9,18 @@
 
     <div class="caja-buscador">
 
-      <!-- DESTINO -->
+   
       <DestinationInput v-model="destination"/>
 
-      <!-- FECHAS -->
+
       <DatePicker
         v-model:checkIn="checkIn"
         v-model:checkOut="checkOut"
       />
 
-      <!-- HUESPEDES -->
+     
       <GuestsSelector v-model="guests"/>
 
-      <!-- BOTON BUSCAR -->
       <div class="boton-buscar" @click="search">
 
         <img src="@/assets/imagenes/logos/lupa.svg">
@@ -75,7 +74,7 @@ guests: guests.value
 
 <style scoped>
 
-/* HERO */
+
 
 .hero{
 width:100%;
@@ -84,7 +83,6 @@ font-family:'Poppins-Regular';
 }
 
 
-/* IMAGEN HERO */
 
 .imagen-hero{
 width:100%;
@@ -102,7 +100,6 @@ display:block;
 }
 
 
-/* BUSCADOR */
 
 .caja-buscador{
 
@@ -120,29 +117,27 @@ background:white;
 
 border-radius:50px;
 
-padding:10px;
+padding:15px;
 
 box-shadow:0 20px 40px rgba(0,0,0,0.15);
 
 width:900px;
 
-gap:5px;
+gap:2px;
 
 z-index:1000;
 
 }
 
 
-/* BOTON BUSCAR */
-
 .boton-buscar{
 
-width:55px;
-height:55px;
+width:50px;
+height:50px;
 
-background:#C7C4E7;
+background:#f2f2f2;
 
-border-radius:50%;
+border-radius:50px;
 
 display:flex;
 align-items:center;
@@ -157,18 +152,18 @@ margin-left:5px;
 }
 
 .boton-buscar img{
-width:22px;
-height:22px;
+width:20px;
+height:20px;
 }
 
 
-/* HOVER BOTON */
+
 
 .boton-buscar:hover{
 
 transform:scale(1.08);
 
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+box-shadow:0 10px 20px rgba(211, 207, 207, 0.2);
 
 }
 
@@ -189,4 +184,4 @@ padding:15px;
 }
 
 </style>
-```
+

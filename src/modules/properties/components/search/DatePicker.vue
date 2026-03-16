@@ -123,8 +123,7 @@ Selecciona día de salida
 display:flex;
 flex-direction:column;
 padding:14px 22px;
-border-right:1px solid #e5e5e5;
-width:260px;
+width:240px;
 position:relative;
 font-family:'Poppins-Regular';
 transition:.25s;

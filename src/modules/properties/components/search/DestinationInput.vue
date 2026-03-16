@@ -64,7 +64,7 @@ v-for="city in filtered"
 class="item"
 @click="selectCity(city)"
 >
-📍 {{ city }}
+ {{ city }}
 </div>
 
 </div>
@@ -81,8 +81,7 @@ class="item"
 display:flex;
 flex-direction:column;
 padding:14px 22px;
-border-right:1px solid #e5e5e5;
-width:260px;
+width:230px;
 position:relative;
 font-family:'Poppins-Regular';
 transition:all .25s ease;
@@ -132,6 +131,7 @@ overflow:hidden;
 .list{
 max-height:220px;
 overflow-y:auto;
+
 }
 
 .list::-webkit-scrollbar{
@@ -154,6 +154,7 @@ padding:12px 15px;
 cursor:pointer;
 transition:.2s;
 color:#222;
+
 }
 
 .item:hover{
