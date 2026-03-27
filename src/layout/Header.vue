@@ -51,8 +51,8 @@ export default {
   align-items:center;
   gap:6px;
   font-size: 15px;
- font-family: 'Gotham-Rounded-Book';
-  color:#374564;
+ font-family:'Poppins-Regular';
+  color:#484769;
   cursor:pointer;
 }
 

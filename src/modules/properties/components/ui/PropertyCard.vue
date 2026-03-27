@@ -2,22 +2,22 @@
 
 <div class="card" @click="goToDetail">
 
-  <!-- imagen -->
+
   <div class="image-container">
 
-    <img :src="property.images[0]" />
+  <img :src="property.images[0]" />
 
+  <div class="rating">
+    <img src="@/assets/imagenes/logos/estrella.svg" class="star"/>
+    <span>{{ property.rating }}</span>
   </div>
+
+</div>
 
   <div class="card-body d">
 
-    <!-- rating -->
-    <div class="rating">
-      <img src="@/assets/imagenes/logos/estrella.svg" class="star"/>
-      <span>{{ property.rating }}</span>
-    </div>
 
-    <h1 class="title">{{ property.name }}</h1>
+    <p class="title">{{ property.name }}</p>
 
     <p class="type">{{ property.type }}</p>
 
@@ -80,7 +80,6 @@ width:320px;
 height:350px;
 background:#FFFFFF;
 border-radius:20px;
-flex-shrink:0;
 cursor:pointer;}
 
 
@@ -101,30 +100,38 @@ padding:5px 18px;
 }
 
 .rating{
-display:flex;
-align-items:center;
-gap:6px;
-font-size:10px;
-font-family:'Gotham-Rounded-Light';
-color:#7A73B7;
+  position:absolute;
+  bottom:4px;
+  right:0;
+  background:#484769;
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+  gap:6px;
+
+  padding:6px 10px;
+  border-radius:20px 0 0 0px;
+  font-size:12px;
+  font-family:'Gotham-Rounded-Light';
 }
 
-.star{
-width:16px;
+.rating img {
+width:10px;
+height: 10px;
 }
 
-.title{
-font-size:16px;
-font-weight:700;
+.title {
+font-size:20px;
 color:#484769;
-font-family:'Gotham-Rounded-Book';
-margin:7px 0;
+ font-family: 'Poppins-Medium';
+
 }
 
 .type{
 font-size:12px;
 color:#7A73B7;
-font-family:'Gotham-Rounded-Light';
+font-family: 'Poppins-Light';
 margin-bottom:3px;
 }
 
@@ -132,7 +139,7 @@ margin-bottom:3px;
 display:flex;
 align-items:center;
 gap:6px;
-font-family:'Gotham-Rounded-Book';
+font-family: 'Poppins-Regular';
 font-size:12px;
 color:#0177FF;
 }
@@ -142,16 +149,15 @@ width:16px;
 }
 
 .price{
-font-size:13px;
-font-weight:700;
-font-family:'Gotham-Rounded-Book';
-color:#5A5A8A;
+font-size:14px;
+ font-family: 'Poppins-Medium';
+color:#484769;
 margin-top:6px;
 }
 
 .info{
-font-size:13px;
-font-family:'Gotham-Rounded-Light';
+font-size:12px;
+font-family: 'Poppins-Light';
 color:#7A73B7;
 }
 

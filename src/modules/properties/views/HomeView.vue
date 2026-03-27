@@ -101,8 +101,7 @@ const limitedCities = computed(() => {
 
 
 .title{
-  font-size:28px;
-  font-weight:600;
+  font-size:20px;
   margin-bottom:25px;
   font-family: 'Poppins-Regular';
   color:#48427B;
