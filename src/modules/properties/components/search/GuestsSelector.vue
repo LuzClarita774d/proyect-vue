@@ -165,7 +165,7 @@ top:75px;
 left:0;
 background:white;
 border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,.15);
+box-shadow:0 15px 35px rgba(0,0,0,.12);
 padding:25px;
 width:330px;
 

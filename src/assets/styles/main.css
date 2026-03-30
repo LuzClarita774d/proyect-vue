@@ -27,7 +27,7 @@
 }
 
 @font-face {
-  font-family: 'Poppins-Regular';
+  font-family:'Poppins-Regular';
   src: url('@/assets/fonts/Poppins-Regular.ttf') format('truetype');
 
 }
@@ -43,7 +43,7 @@
 
 
 body{
-    background-color: #F4F5FA;
+    background-color: #F2F3F3;
     margin:0;
 }
 

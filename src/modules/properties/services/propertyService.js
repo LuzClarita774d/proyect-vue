@@ -1,63 +1,58 @@
 import { properties } from "../data/properties"
 
 /* OBTENER PROPIEDAD POR ID */
-
 export function getPropertyById(id){
   return properties.find(property => property.id == id)
 }
 
 /* BUSQUEDA DE PROPIEDADES */
-
 export function searchProperties(filters){
 
-return properties.filter(property => {
+  return properties.filter(property => {
 
-const destination = filters.destination?.toLowerCase() || ""
+    const destination = filters.destination?.toLowerCase() || ""
 
-/* DESTINO */
+    /* DESTINO */
+    const destinationMatch =
+      !destination ||
+      property.city.toLowerCase().includes(destination) ||
+      property.location.toLowerCase().includes(destination)
 
-const destinationMatch =
-!destination ||
-property.city.toLowerCase().includes(destination) ||
-property.location.toLowerCase().includes(destination)
+    /* HUÉSPEDES */
+    const guestsMatch =
+      property.maxGuests >= filters.guests
 
-/* HUESPEDES */
+  
+    let dateMatch = true
 
-const guestsMatch =
-property.maxGuests >= filters.guests
+    /* FECHAS */
+    if(filters.checkIn && filters.checkOut){
 
-/* FECHAS */
+      const start = new Date(filters.checkIn)
+      const end = new Date(filters.checkOut)
 
-let dateMatch = true
+      const nights =
+        Math.ceil((end - start) / (1000 * 60 * 60 * 24))
 
-if(filters.checkIn && filters.checkOut){
+      dateMatch = property.availability?.some(range => {
 
-const start = new Date(filters.checkIn)
-const end = new Date(filters.checkOut)
+        const availableStart = new Date(range.from)
+        const availableEnd = new Date(range.to)
 
-const nights =
-Math.ceil((end - start) / (1000 * 60 * 60 * 24))
+        const withinRange =
+          start >= availableStart &&
+          end <= availableEnd
 
-dateMatch = property.availability.some(range => {
+        const enoughNights =
+          (availableEnd - availableStart) / (1000 * 60 * 60 * 24) >= nights
 
-const availableStart = new Date(range.from)
-const availableEnd = new Date(range.to)
+        return withinRange && enoughNights
 
-const withinRange =
-start >= availableStart &&
-end <= availableEnd
+      }) || false
+    }
 
-const enoughNights =
-(availableEnd - availableStart) / (1000 * 60 * 60 * 24) >= nights
+    return destinationMatch && guestsMatch && dateMatch
 
-return withinRange && enoughNights
-
-})
-
-}
-
-return destinationMatch && guestsMatch && dateMatch
-
-})
+  })
 
 }

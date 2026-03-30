@@ -2,22 +2,22 @@
 
 <div class="card" @click="goToDetail">
 
-  <!-- imagen -->
+
   <div class="image-container">
 
-    <img :src="property.images[0]" />
+  <img :src="property.images[0]" />
 
+  <div class="rating">
+    <img src="@/assets/imagenes/logos/estrella.svg" class="star"/>
+    <span>{{ property.rating }}</span>
   </div>
+
+</div>
 
   <div class="card-body d">
 
-    <!-- rating -->
-    <div class="rating">
-      <img src="@/assets/imagenes/logos/estrella.svg" class="star"/>
-      <span>{{ property.rating }}</span>
-    </div>
 
-    <h1 class="title">{{ property.name }}</h1>
+    <p class="title">{{ property.name }}</p>
 
     <p class="type">{{ property.type }}</p>
 
@@ -75,66 +75,114 @@ const nights = computed(() => {
 
 <style scoped>
 
-.card{
-width:320px;
-height:350px;
-background:#FFFFFF;
-border-radius:20px;
-flex-shrink:0;
-cursor:pointer;}
 
+.card{
+  width:320px;
+  min-width:320px;
+  height:280px;
+
+  display:flex;
+  flex-direction:column;
+
+  background:#FFFFFF;
+border-radius:20px;
+}
 
 .image-container{
 position:relative;
 }
 
 .image-container img{
-width:320px;
-height:150px;
-object-fit:cover;
-border-radius:20px 20px 0px 0px;
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:20px 20px 0px 0px;
+
+  display:block;
 }
 
 .card-body{
-padding:5px 18px;
+  padding:10px 16px;
+  flex: 1;
 
+  display:flex;
+  flex-direction:column;
+  
 }
 
 .rating{
-display:flex;
-align-items:center;
-gap:6px;
-font-size:10px;
-font-family:'Gotham-Rounded-Light';
-color:#7A73B7;
+  position:absolute;
+  bottom:0px;
+  right:0;
+  background:#059CF3;
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+  gap:6px;
+
+  padding:6px 10px;
+  border-radius:20px 0 0 0px;
+  font-size:12px;
+  font-family:'Gotham-Rounded-Light';
 }
 
-.star{
-width:16px;
+.rating img {
+width:10px;
+height: 10px;
 }
 
-.title{
-font-size:16px;
-font-weight:700;
-color:#484769;
-font-family:'Gotham-Rounded-Book';
-margin:7px 0;
+
+.title {
+  font-size:16px;
+  color:#484769;
+  font-family: 'Poppins-Medium';
+
+  white-space: nowrap;       
+  overflow: hidden;           
+  text-overflow: ellipsis;   
+  max-width: 100%;           
+  display: block;
 }
+
+.title,
+.type,
+.price,
+.info {
+  margin: 0;
+}
+
+.type{
+  margin-bottom:0;
+}
+
+.price{
+  margin-top:2px;
+}
+
 
 .type{
 font-size:12px;
 color:#7A73B7;
-font-family:'Gotham-Rounded-Light';
-margin-bottom:3px;
+font-family: 'Poppins-Light';
+
 }
 
 .location{
-display:flex;
-align-items:center;
-gap:6px;
-font-family:'Gotham-Rounded-Book';
-font-size:12px;
-color:#0177FF;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-family: 'Poppins-Regular';
+  font-size:12px;
+  color:#0177FF;
+
+  min-width: 0; 
+}
+.location span{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 .location img{
@@ -142,16 +190,15 @@ width:16px;
 }
 
 .price{
-font-size:13px;
-font-weight:700;
-font-family:'Gotham-Rounded-Book';
-color:#5A5A8A;
-margin-top:6px;
+font-size:16px;
+ font-family: 'Poppins-Medium';
+color:#484769;
+
 }
 
 .info{
-font-size:13px;
-font-family:'Gotham-Rounded-Light';
+font-size:12px;
+font-family: 'Poppins-Light';
 color:#7A73B7;
 }
 

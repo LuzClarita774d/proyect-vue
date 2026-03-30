@@ -1,9 +1,9 @@
 <template>
-  
     <header class="header">
 
       <div class="logo">
-       <router-link to="/"><img src="@/assets/imagenes/logos/logo.svg" alt="logo"></router-link>
+      <router-link :to="{ name: 'home' }">
+        <img src="@/assets/imagenes/logos/logo.png" alt="logo"></router-link>
       </div>
 
       <div class="iconos">
@@ -33,8 +33,8 @@ export default {
   justify-content:space-between;
   align-items:center;
   padding: 22px 30px;
-  border-bottom:1px solid #eee;
-  background:#ffffff;
+
+  background:#152644;
 }
 
 
@@ -51,8 +51,8 @@ export default {
   align-items:center;
   gap:6px;
   font-size: 15px;
- font-family: 'Gotham-Rounded-Book';
-  color:#374564;
+ font-family:'Poppins-Regular';
+  color:#ffffff;
   cursor:pointer;
 }
 

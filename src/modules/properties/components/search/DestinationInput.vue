@@ -105,7 +105,7 @@ border:none;
 outline:none;
 font-size:15px;
 font-family:'Poppins-Regular';
-color:#111;
+color:#484769;
 background:transparent;
 
 
@@ -153,7 +153,8 @@ padding:10px 15px;
 padding:12px 15px;
 cursor:pointer;
 transition:.2s;
-color:#222;
+font-size: 14px;
+color:#484769;
 
 }
 
