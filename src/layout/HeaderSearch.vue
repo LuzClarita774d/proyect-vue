@@ -3,12 +3,12 @@
 <header class="header">
 
   <div class="logo">
-    <router-link to="/">
-      <img src="@/assets/imagenes/logos/logo.svg" alt="logo">
+    <router-link :to="{ name: 'home' }">
+      <img src="@/assets/imagenes/logos/logo.png" alt="logo">
     </router-link>
   </div>
 
-  <!-- BUSCADOR -->
+
 
   <div class="search-box">
 
@@ -29,12 +29,7 @@
 
   <div class="iconos">
 
-    <div class="idiomas">
-      MXN
-      <img src="@/assets/imagenes/logos/Vector.svg">
-    </div>
 
-    <img class="usuario" src="@/assets/imagenes/logos/usuario.svg">
     <img class="menu" src="@/assets/imagenes/logos/hamburguesa.svg">
 
   </div>
@@ -84,40 +79,31 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding: 22px 18px;
-border-bottom:1px solid #eee;
-background:white;
+background:#152644;
 }
 
 .search-box{
 display:flex;
 align-items:center;
-gap:10px;
-background:#F2F8FF;
-padding:8px 12px;
-border-radius:12px;
+background-color: #ffff;
+border-radius:50px;
 }
 
 .search-item{
 display:flex;
 align-items:center;
-gap:6px;
-font-family:"Gotham Rounded Book";
-color:#374564;
+gap:3px;
+
 }
 
-.search-item img{
-width:18px;
-}
+
 
 .search-button{
 width:35px;
 height:35px;
-background:white;
-border-radius:50%;
 display:flex;
 align-items:center;
-justify-content:center;
-cursor:pointer;
+cuRsor:pointer;
 }
 
 .iconos{

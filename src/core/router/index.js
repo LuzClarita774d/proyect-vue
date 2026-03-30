@@ -6,24 +6,25 @@ import ResultsView from '@/modules/properties/views/ResultsView.vue'
 
 const routes = [
 
-    {
-        path: '/',
-        name: 'home',
-        component: HomeView
-    },
-
-    {
-        path: '/results',
-        name: 'results',
-        component: ResultsView
-    },
-
-    {
-        path: '/property/:id',
-        name: 'property-detail',
-        component: PropertyDetailView,
-        props: true
-    }
+{
+  path: '/',
+  name: 'home',
+  component: HomeView,
+  meta: { header: 'default' }
+},
+{
+  path: '/results',
+  name: 'results',
+  component: ResultsView,
+  meta: { header: 'search' }
+},
+{
+  path: '/property/:id',
+  name: 'property',
+  component: PropertyDetailView,
+  props: true,
+  meta: { header: 'default' }
+}
 
 ]
 

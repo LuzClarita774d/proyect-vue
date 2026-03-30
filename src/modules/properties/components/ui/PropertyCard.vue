@@ -75,35 +75,46 @@ const nights = computed(() => {
 
 <style scoped>
 
-.card{
-width:320px;
-height:350px;
-background:#FFFFFF;
-border-radius:20px;
-cursor:pointer;}
 
+.card{
+  width:320px;
+  min-width:320px;
+  height:280px;
+
+  display:flex;
+  flex-direction:column;
+
+  background:#FFFFFF;
+border-radius:20px;
+}
 
 .image-container{
 position:relative;
 }
 
 .image-container img{
-width:320px;
-height:150px;
-object-fit:cover;
-border-radius:20px 20px 0px 0px;
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:20px 20px 0px 0px;
+
+  display:block;
 }
 
 .card-body{
-padding:5px 18px;
+  padding:10px 16px;
+  flex: 1;
 
+  display:flex;
+  flex-direction:column;
+  
 }
 
 .rating{
   position:absolute;
-  bottom:4px;
+  bottom:0px;
   right:0;
-  background:#484769;
+  background:#059CF3;
   color:#fff;
 
   display:flex;
@@ -121,27 +132,57 @@ width:10px;
 height: 10px;
 }
 
-.title {
-font-size:20px;
-color:#484769;
- font-family: 'Poppins-Medium';
 
+.title {
+  font-size:16px;
+  color:#484769;
+  font-family: 'Poppins-Medium';
+
+  white-space: nowrap;       
+  overflow: hidden;           
+  text-overflow: ellipsis;   
+  max-width: 100%;           
+  display: block;
 }
+
+.title,
+.type,
+.price,
+.info {
+  margin: 0;
+}
+
+.type{
+  margin-bottom:0;
+}
+
+.price{
+  margin-top:2px;
+}
+
 
 .type{
 font-size:12px;
 color:#7A73B7;
 font-family: 'Poppins-Light';
-margin-bottom:3px;
+
 }
 
 .location{
-display:flex;
-align-items:center;
-gap:6px;
-font-family: 'Poppins-Regular';
-font-size:12px;
-color:#0177FF;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-family: 'Poppins-Regular';
+  font-size:12px;
+  color:#0177FF;
+
+  min-width: 0; 
+}
+.location span{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 .location img{
@@ -149,10 +190,10 @@ width:16px;
 }
 
 .price{
-font-size:14px;
+font-size:16px;
  font-family: 'Poppins-Medium';
 color:#484769;
-margin-top:6px;
+
 }
 
 .info{

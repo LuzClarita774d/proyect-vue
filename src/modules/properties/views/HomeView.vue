@@ -120,10 +120,12 @@ const limitedCities = computed(() => {
 }
 
 
-
-.carousel-track{
+.carousel-track {
   display:flex;
   gap:24px;
+  width:max-content;
+
+  align-items:flex-start; 
 }
 
 

@@ -100,7 +100,7 @@ export const properties = [
     "price": 3200,
     "maxGuests": 5,
     "availability": [
-      { "from": "2026-03-25", "to": "2026-04-05" }
+      { "from": "2026-03-30", "to": "2026-08-05" }
     ],
     "images": ["https://images.unsplash.com/photo-1445019980597-93fa8acb246c"],
     "description": "Departamento con vistas al lago y zona de fogata.",
@@ -349,7 +349,7 @@ export const properties = [
   {
     "id": 23,
     "rating": 4.9,
-    "name": "Grand Hotel Boutique Puebla",
+    "name": "Grand Hotel Boutique Puebla ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
     "city": "Puebla",
     "location": "Puebla",
     "type": "hotel",
