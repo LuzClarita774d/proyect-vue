@@ -16,34 +16,72 @@ export const properties = [
     "amenities": ["Spa", "Restaurante Gourmet", "Cava de Vinos"]
   },
 {
-    "id": 3,
-    "rating": 4.7,
-    "name": "Loft Histórico Puebla",
-    "city": "Puebla",
-    "location": "Puebla",
-    "type": "departamento",
-    "price": 2200,
-    "maxGuests": 4,
-    "Habitaciones": 3,
-    "Baños": 2,
-    "availability": [
-      { "from": "2026-03-01", "to": "2026-05-10" }
-    ],
-    "images": [
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
-      "https://images.unsplash.com/photo-1560448204-603b3fc33ddc",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-      " https://images.unsplash.com/photo-1571896349842-33c89424de2d ",
-      "https://images.unsplash.com/photo-1499916078039-922301b0eb9b"
-    ],
-    "description": "Departamento moderno con techos altos en el centro histórico.",
-    "amenities": ["Cocina equipada", "Wifi de alta velocidad", "Balcón"]
+  "id": 3,
+  "rating": 4.7,
+  "name": "Loft Histórico Puebla",
+  "city": "Puebla",
+  "location": "Puebla",
+  "type": "departamento",
+  "price": 2200,
+  "maxGuests": 4,
+  "Habitaciones": 3,
+  "Baños": 2,
+  "availability": [
+    {
+      "from": "2026-03-01",
+      "to": "2026-05-10"
+    }
+  ],
+  "host": {
+    "id": 101,
+    "name": "Judd Stephens",
+    "image": "https://randomuser.me/api/portraits/men/18.jpg",
+    "joinedDate": "Mayo 2024",
+    "responseTime": " en menos de una hora",
+    "telefono": "(422) 585-9895",
+    "correo": "judd.stephens@example.com",
+    "estudios": "URT",
+    "descripcion": "Me encanta bailar y el arte contemporáneo, donde movimiento y creatividad expresan emociones profundas.",
+    "responseRate": "100%",
+    "rating": 4.9,
+    "totalReviews": 128,
+    "languages": ["Español", "Inglés"]
+  },
+  "evaluaciones": [
+    {
+      "id": 1,
+      "usuario": "Mariana",
+      "fecha": "Febrero 2026",
+      "comentario": "El lugar es impecable y la atención de Judd fue de primer nivel. La laguna es increíble.",
+      "puntuacion": 5
+    },
+    {
+      "id": 2,
+      "usuario": "Carlos",
+      "fecha": "Enero 2026",
+      "comentario": "Excelente ubicación y muy seguro. Ideal para ir con la familia.",
+      "puntuacion": 4.5
+    }
+  ],
+  "images": [
+    "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+    "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+    "https://images.unsplash.com/photo-1560448204-603b3fc33ddc",
+    "https://images.unsplash.com/photo-1582719508461-905c673771fd",
+    "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+    "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+    "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+    "https://images.unsplash.com/photo-1499916078039-922301b0eb9b"
+  ],
+  "description": "Será un gusto recibirte en nuestros departamentos, ubicados en un entorno tranquilo y familiar. Disfruta de nuestra impresionante laguna cristalina tipo playa artificial, ideal para relajarte y pasar momentos inolvidables. Al reservar con nosotros, se te asignarán 3 departamentos completamente independientes, cada uno con 2 recámaras, 2 baños completos, sala, comedor y cocina equipada. Si lo prefieres, también contamos con la opción de 2 departamentos con 3 recámaras. El lugar es 100% familiar y cuenta con vigilancia las 24 horas para tu seguridad. Además, la playa y la zona hotelera se encuentran a solo 20 minutos. Dentro del desarrollo podrás disfrutar de 7 albercas, y tendrás supermercados y servicios muy cercanos para mayor comodidad. Dreams Lagoon destaca por su excelente ubicación, seguridad y ambiente agradable. Recomendamos rentar automóvil para facilitar tu movilidad; con gusto podemos apoyarte con opciones de renta de autos y camionetas a precios accesiblesEl lugar es 100% familiar y cuenta con vigilancia las 24 horas para tu seguridad. Además, la playa y la zona hotelera se encuentran a solo 20 minutos. Dentro del desarrollo podrás disfrutar de 7 albercas, y tendrás supermercados y servicios muy cercanos para mayor comodidad. Dreams Lagoon destaca por su excelente ubicación, seguridad y ambiente agradable. Recomendamos rentar automóvil para facilitar tu movilidad; con gusto podemos apoyarte con opciones de renta de autos y camionetas a precios accesibles. ",
+  "amenities": [
+    "Cocina equipada",
+    "Wifi de alta velocidad",
+    "Balcón"
+  ]
 },
-  {
-    "id": 4,
+{ 
+  "id": 4,
     "rating": 4.9,
     "name": "Villa Mar de Cortés",
     "city": "Los Cabos",
