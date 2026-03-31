@@ -6,10 +6,13 @@
         <img src="@/assets/imagenes/logos/logo.png" alt="logo"></router-link>
       </div>
 
-      <div class="iconos">
-        <div class="alfitrion">
-          Convierte en alfitrión
-        </div>
+
+
+            <div class="iconos">
+      <!-- Aquí vinculamos al HostView -->
+      <router-link :to="{ name: 'host' }" class="alfitrion">
+        Convierte en anfitrión
+      </router-link>
        
         <img class="menu" src="@/assets/imagenes/logos/hamburguesa.svg" alt="menu">
       </div>
