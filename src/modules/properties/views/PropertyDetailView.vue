@@ -21,10 +21,10 @@
       </div>
     </div>
 
-    <!-- LAYOUT INFO + RESERVA -->
+
     <div class="content">
 
-      <!-- IZQUIERDA -->
+
       <div class="info">
 <div class="property-container">
   <div class="header-inline">
@@ -51,36 +51,26 @@
 </div>
 
  <DescriptionCard :text="property.description" />
+ <hr class="separator">
       
 
-        <!-- HOST -->
-        <div v-if="property.host" class="host-section">
-          <div class="host-header">
-            <img :src="property.host.image" class="host-img" />
-            <div>
-              <p>Evaluaciones {{ property.host.totalReviews }}</p>
-              <p>Calificación {{ property.host.rating }}</p>
-              <p>Miembro desde {{ property.host.joinedDate }}</p>
-              <h3>{{ property.host.name }}</h3>
-              <p>{{ property.host.telefono }}</p>
-              <p>{{ property.host.correo }}</p>
-              <p>Estudios {{ property.host.estudios }}</p>
-              <p>{{ property.host.descripcion }}</p>
-            </div>
-          </div>
-        </div>
+<div class="property-detail-page">
+    <section class="amenities-section">
+      <AmenitySelector />
+    </section>
 
-        <hr class="separator" />
+    </div>>
+          <hr class="separator">
 
-        <!-- AMENIDADES -->
-        <div class="amenities-list">
-          <h3>Amenidades</h3>
-          <ul>
-            <li v-for="(a, i) in property.amenities" :key="i">
-              {{ a }}
-            </li>
-          </ul>
-        </div>
+  <div v-if="property.host" class="host-section">
+    <AlfitionesCard
+      :host="property.host"
+      @select="goToHostProfile"
+    />
+  </div>
+      
+
+
       </div>
 
       <ReservationCard 
@@ -98,8 +88,13 @@ import { getPropertyById } from '../services/propertyService'
 import { useRouter } from "vue-router"
 import ReservationCard from '@/modules/properties/components/ui/ReservationCard.vue'
 import DescriptionCard from '@/modules/properties/components/ui/DescriptionCard.vue'
-
+import AlfitionesCard from '@/modules/properties/components/ui/AlfitionesCard.vue'
+import AmenitySelector from '@/modules/properties/components/ui/AmenitySelector.vue';
 const router = useRouter()
+
+function goToHostProfile(hostId) {
+  router.push(`/host/${hostId}`)
+}
 
 const props = defineProps({
   id: String
@@ -127,11 +122,6 @@ function goToCheckout(data){
 
 <style scoped>
 
-
-.property-container {
-
-}
-
 .header-inline {
   display: flex;
   align-items: baseline; 
@@ -153,7 +143,11 @@ function goToCheckout(data){
   margin: 0;
 }
 
-
+.amenities-section {
+  margin: 40px 0;
+  padding: 20px;
+  border-top: 1px solid #eee; /* Una línea sutil para separar secciones */
+}
 .icons {
   display: flex;
   gap: 40px; 
@@ -179,7 +173,10 @@ function goToCheckout(data){
   border: 0;
   border-top: 1px solid #ADADB2;
   margin-top: 10px;
-  width: 100%;
+  margin-left: 0;
+  width: 660px;
+  margin-right: auto;
+  
 }
 .detail {
   max-width: 1200px;
