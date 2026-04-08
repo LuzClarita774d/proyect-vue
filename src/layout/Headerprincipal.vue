@@ -6,7 +6,7 @@
 
 
     <div class="imagen">
-  <img src="@/assets/imagenes/properties/casa2.svg" alt="">
+  <img src="@/assets/imagenes/logos/casa2.svg" alt="">
 
   <div class="texto">
     <h1>TRAVEL</h1>

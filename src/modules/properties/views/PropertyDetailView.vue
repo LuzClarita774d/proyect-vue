@@ -55,11 +55,11 @@
       
 
 <div class="property-detail-page">
-    <section class="amenities-section">
-      <AmenitySelector />
-    </section>
+  <section class="amenities-section">
+    <AmenitySelector />
+  </section>
+</div>
 
-    </div>>
           <hr class="separator">
 
   <div v-if="property.host" class="host-section">
@@ -89,7 +89,7 @@ import { useRouter } from "vue-router"
 import ReservationCard from '@/modules/properties/components/ui/ReservationCard.vue'
 import DescriptionCard from '@/modules/properties/components/ui/DescriptionCard.vue'
 import AlfitionesCard from '@/modules/properties/components/ui/AlfitionesCard.vue'
-import AmenitySelector from '@/modules/properties/components/ui/AmenitySelector.vue';
+import AmenitySelector from '@/modules/properties/components/ui/AmenitySelector.vue'
 const router = useRouter()
 
 function goToHostProfile(hostId) {
