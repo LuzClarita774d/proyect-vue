@@ -12,72 +12,67 @@ export const properties = [
       { "from": "2026-04-05", "to": "2026-04-15" }
     ],
     "images": ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"],
-    "description": "Antigua hacienda colonial con jardines exóticos y elegancia rústica.",
-    "amenities": ["Spa", "Restaurante Gourmet", "Cava de Vinos"]
+    "description": "Antigua hacienda colonial con jardines exóticos y elegancia rústica."
   },
-{
-  "id": 3,
-  "rating": 4.7,
-  "name": "Loft Histórico Puebla",
-  "city": "Puebla",
-  "location": "Puebla",
-  "type": "departamento",
-  "price": 2200,
-  "maxGuests": 4,
-  "Habitaciones": 3,
-  "Baños": 2,
-  "availability": [
-    {
-      "from": "2026-03-01",
-      "to": "2026-05-10"
-    }
-  ],
-  "host": {
-    "id": 101,
-    "name": "Judd Stephens",
-    "image": "https://randomuser.me/api/portraits/men/18.jpg",
-    "joinedDate": "Mayo 2024",
-    "responseTime": " en menos de una hora",
-    "telefono": "(422) 585-9895",
-    "correo": "judd.stephens@example.com",
-    "estudios": "URT",
-    "descripcion": "Me encanta bailar y el arte contemporáneo, donde movimiento y creatividad expresan emociones profundas.",
-    "responseRate": "100%",
-    "rating": 4.9,
-    "totalReviews": 128,
-    "languages": ["Español", "Inglés"]
-  },
-  "evaluaciones": [
-    {
-      "id": 1,
-      "usuario": "Mariana",
-      "fecha": "Febrero 2026",
-      "comentario": "El lugar es impecable y la atención de Judd fue de primer nivel. La laguna es increíble.",
-      "puntuacion": 5
+  {
+    "id": 3,
+    "rating": 4.7,
+    "name": "Loft Histórico Puebla",
+    "city": "Puebla",
+    "location": "Puebla",
+    "type": "departamento",
+    "price": 2200,
+    "maxGuests": 4,
+    "Habitaciones": 3,
+    "Baños": 2,
+    "availability": [
+      { "from": "2026-03-01", "to": "2026-05-10" }
+    ],
+    "host": {
+      "id": 101,
+      "name": "Judd Stephens",
+      "image": "https://randomuser.me/api/portraits/men/18.jpg",
+      "joinedDate": "Mayo 2024",
+      "responseTime": " en menos de una hora",
+      "telefono": "(422) 585-9895",
+      "correo": "judd.stephens@example.com",
+      "estudios": "URT",
+      "descripcion": "Me encanta bailar y el arte contemporáneo, donde movimiento y creatividad expresan emociones profundas.",
+      "responseRate": "100%",
+      "rating": 4.9,
+      "totalReviews": 128,
+      "languages": ["Español", "Inglés"]
     },
-    {
-      "id": 2,
-      "usuario": "Carlos",
-      "fecha": "Enero 2026",
-      "comentario": "Excelente ubicación y muy seguro. Ideal para ir con la familia.",
-      "puntuacion": 4.5
-    }
-  ],
-  "images": [
-    "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-    "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
-    "https://images.unsplash.com/photo-1560448204-603b3fc33ddc",
-    "https://images.unsplash.com/photo-1582719508461-905c673771fd",
-    "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-    "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-    "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
-    "https://images.unsplash.com/photo-1499916078039-922301b0eb9b"
-  ],
-  "description": "Será un gusto recibirte en nuestros departamentos, ubicados en un entorno tranquilo y familiar. Disfruta de nuestra impresionante laguna cristalina tipo playa artificial, ideal para relajarte y pasar momentos inolvidables. Al reservar con nosotros, se te asignarán 3 departamentos completamente independientes, cada uno con 2 recámaras, 2 baños completos, sala, comedor y cocina equipada. Si lo prefieres, también contamos con la opción de 2 departamentos con 3 recámaras. El lugar es 100% familiar y cuenta con vigilancia las 24 horas para tu seguridad. Además, la playa y la zona hotelera se encuentran a solo 20 minutos. Dentro del desarrollo podrás disfrutar de 7 albercas, y tendrás supermercados y servicios muy cercanos para mayor comodidad. Dreams Lagoon destaca por su excelente ubicación, seguridad y ambiente agradable. Recomendamos rentar automóvil para facilitar tu movilidad; con gusto podemos apoyarte con opciones de renta de autos y camionetas a precios accesiblesEl lugar es 100% familiar y cuenta con vigilancia las 24 horas para tu seguridad. Además, la playa y la zona hotelera se encuentran a solo 20 minutos. Dentro del desarrollo podrás disfrutar de 7 albercas, y tendrás supermercados y servicios muy cercanos para mayor comodidad.Dreams Lagoon destaca por su excelente ubicación, seguridad y ambiente agradable. Recomendamos rentar automóvil para facilitar tu movilidad; con gusto podemos apoyarte con opciones de renta de autos y camionetas a precios accesibles. ",
-
-},
-{ 
-  "id": 4,
+    "evaluaciones": [
+      {
+        "id": 1,
+        "usuario": "Mariana",
+        "fecha": "Febrero 2026",
+        "comentario": "El lugar es impecable y la atención de Judd fue de primer nivel. La laguna es increíble.",
+        "puntuacion": 5
+      },
+      {
+        "id": 2,
+        "usuario": "Carlos",
+        "fecha": "Enero 2026",
+        "comentario": "Excelente ubicación y muy seguro. Ideal para ir con la familia.",
+        "puntuacion": 4.5
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+      "https://images.unsplash.com/photo-1560448204-603b3fc33ddc",
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+      "https://images.unsplash.com/photo-1499916078039-922301b0eb9b"
+    ],
+    "description": "Será un gusto recibirte en nuestros departamentos, ubicados en un entorno tranquilo y familiar. Disfruta de nuestra impresionante laguna cristalina tipo playa artificial, ideal para relajarte y pasar momentos inolvidables. Al reservar con nosotros, se te asignarán 3 departamentos completamente independientes, cada uno con 2 recámaras, 2 baños completos, sala, comedor y cocina equipada. Si lo prefieres, también contamos con la opción de 2 departamentos con 3 recámaras. El lugar es 100% familiar y cuenta con vigilancia las 24 horas para tu seguridad. Además, la playa y la zona hotelera se encuentran a solo 20 minutos. Dentro del desarrollo podrás disfrutar de 7 albercas, y tendrás supermercados y servicios muy cercanos para mayor comodidad. Dreams Lagoon destaca por su excelente ubicación, seguridad y ambiente agradable."
+  },
+  {
+    "id": 4,
     "rating": 4.9,
     "name": "Villa Mar de Cortés",
     "city": "Los Cabos",
@@ -89,8 +84,7 @@ export const properties = [
       { "from": "2026-06-12", "to": "2026-06-25" }
     ],
     "images": ["https://images.unsplash.com/photo-1582719508461-905c673771fd"],
-    "description": "Casa de lujo frente al mar con piscina privada y terraza.",
-    "amenities": ["Piscina privada", "Chef disponible", "Acceso directo a playa"]
+    "description": "Casa de lujo frente al mar con piscina privada y terraza."
   },
   {
     "id": 5,
@@ -105,8 +99,7 @@ export const properties = [
       { "from": "2026-03-15", "to": "2026-03-22" }
     ],
     "images": ["https://images.unsplash.com/photo-1571896349842-33c89424de2d"],
-    "description": "Hotel construido en una antigua plaza de toros.",
-    "amenities": ["Bar en la arena", "Gimnasio", "Estacionamiento"]
+    "description": "Hotel construido en una antigua plaza de toros."
   },
   {
     "id": 6,
@@ -121,8 +114,7 @@ export const properties = [
       { "from": "2026-07-01", "to": "2026-07-15" }
     ],
     "images": ["https://images.unsplash.com/photo-1512918766671-ad651ec90231"],
-    "description": "Residencia de lujo con arquitectura colonial y patio interior.",
-    "amenities": ["Chimenea", "Servicio de limpieza", "Terraza privada"]
+    "description": "Residencia de lujo con arquitectura colonial y patio interior."
   },
   {
     "id": 7,
@@ -137,8 +129,7 @@ export const properties = [
       { "from": "2026-03-30", "to": "2026-08-05" }
     ],
     "images": ["https://images.unsplash.com/photo-1445019980597-93fa8acb246c"],
-    "description": "Departamento con vistas al lago y zona de fogata.",
-    "amenities": ["Seguridad 24/7", "Jacuzzi", "Asador"]
+    "description": "Departamento con vistas al lago y zona de fogata."
   },
   {
     "id": 8,
@@ -153,8 +144,7 @@ export const properties = [
       { "from": "2026-10-25", "to": "2026-11-05" }
     ],
     "images": ["https://images.unsplash.com/photo-1520250497591-112f2f40a3f4"],
-    "description": "Hotel con talleres de barro y gastronomía oaxaqueña.",
-    "amenities": ["Patio central", "Wifi", "Biblioteca"]
+    "description": "Hotel con talleres de barro y gastronomía oaxaqueña."
   },
   {
     "id": 9,
@@ -169,8 +159,7 @@ export const properties = [
       { "from": "2026-04-10", "to": "2026-04-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1596436889106-be35e843f974"],
-    "description": "Departamento económico frente al mar.",
-    "amenities": ["Aire acondicionado", "Elevador", "TV por cable"]
+    "description": "Departamento económico frente al mar."
   },
   {
     "id": 10,
@@ -185,8 +174,7 @@ export const properties = [
       { "from": "2026-12-20", "to": "2026-12-31" }
     ],
     "images": ["https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd"],
-    "description": "Casa sustentable en medio de la selva con cenote cercano.",
-    "amenities": ["Eco-friendly", "Cenote privado", "Yoga Deck"]
+    "description": "Casa sustentable en medio de la selva con cenote cercano."
   },
   {
     "id": 11,
@@ -201,8 +189,7 @@ export const properties = [
       { "from": "2026-08-15", "to": "2026-08-30" }
     ],
     "images": ["https://images.unsplash.com/photo-1551882547-ff43c69e5cfd"],
-    "description": "Lujo sofisticado sobre Paseo de la Reforma.",
-    "amenities": ["Mayordomo", "Spa", "Helipuerto"]
+    "description": "Lujo sofisticado sobre Paseo de la Reforma."
   },
   {
     "id": 12,
@@ -217,8 +204,7 @@ export const properties = [
       { "from": "2026-02-15", "to": "2026-03-05" }
     ],
     "images": ["https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"],
-    "description": "Departamento de lujo con las mejores vistas de la capital.",
-    "amenities": ["Gimnasio", "Wifi", "Conserje"]
+    "description": "Departamento de lujo con las mejores vistas de la capital."
   },
   {
     "id": 13,
@@ -233,8 +219,7 @@ export const properties = [
       { "from": "2026-06-01", "to": "2026-06-15" }
     ],
     "images": ["https://images.unsplash.com/photo-1499793983690-e29da59ef1c2"],
-    "description": "Resort familiar con parque acuático.",
-    "amenities": ["Todo incluido", "Piscina", "Snorkel"]
+    "description": "Resort familiar con parque acuático."
   },
   {
     "id": 14,
@@ -249,8 +234,7 @@ export const properties = [
       { "from": "2026-09-10", "to": "2026-09-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"],
-    "description": "Casa privada rodeada de viñedos y bodegas.",
-    "amenities": ["Cata de vinos", "Piscina", "Cancha de tenis"]
+    "description": "Casa privada rodeada de viñedos y bodegas."
   },
   {
     "id": 15,
@@ -265,8 +249,7 @@ export const properties = [
       { "from": "2026-03-10", "to": "2026-03-18" }
     ],
     "images": ["https://images.unsplash.com/photo-1549389478-5ad4bd44a5b6"],
-    "description": "Edificio histórico con arquitectura tradicional.",
-    "amenities": ["Restaurante", "Wifi", "Estacionamiento"]
+    "description": "Edificio histórico con arquitectura tradicional."
   },
   {
     "id": 16,
@@ -281,8 +264,7 @@ export const properties = [
       { "from": "2026-11-12", "to": "2026-11-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1562790351-d273a963e0e9"],
-    "description": "Departamento con diseño industrial y techos de doble altura.",
-    "amenities": ["Pet Friendly", "Lavandería", "Roof Garden"]
+    "description": "Departamento con diseño industrial y techos de doble altura."
   },
   {
     "id": 17,
@@ -297,8 +279,7 @@ export const properties = [
       { "from": "2026-04-20", "to": "2026-04-30" }
     ],
     "images": ["https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9"],
-    "description": "Hotel con espectáculos nocturnos y acceso a playa.",
-    "amenities": ["Club de playa", "Piscina", "Bar"]
+    "description": "Hotel con espectáculos nocturnos y acceso a playa."
   },
   {
     "id": 18,
@@ -313,8 +294,7 @@ export const properties = [
       { "from": "2026-05-15", "to": "2026-05-25" }
     ],
     "images": ["https://images.unsplash.com/photo-1439130490301-25e322d88054"],
-    "description": "Mansión frente al mar con servicio de staff completo.",
-    "amenities": ["Cine privado", "Gimnasio", "Infinity Pool"]
+    "description": "Mansión frente al mar con servicio de staff completo."
   },
   {
     "id": 19,
@@ -329,8 +309,7 @@ export const properties = [
       { "from": "2026-10-15", "to": "2026-10-25" }
     ],
     "images": ["https://images.unsplash.com/photo-1560185007-cde436f6a4d0"],
-    "description": "Apartamento acogedor con vista a la catedral de Morelia.",
-    "amenities": ["Wifi", "Smart TV", "Balcón"]
+    "description": "Apartamento acogedor con vista a la catedral de Morelia."
   },
   {
     "id": 20,
@@ -345,8 +324,7 @@ export const properties = [
       { "from": "2026-07-20", "to": "2026-07-30" }
     ],
     "images": ["https://images.unsplash.com/photo-1540518614846-7eded433c457"],
-    "description": "Lujo todo incluido de clase mundial.",
-    "amenities": ["Spa", "Golf", "Restaurantes"]
+    "description": "Lujo todo incluido de clase mundial."
   },
   {
     "id": 21,
@@ -361,8 +339,7 @@ export const properties = [
       { "from": "2026-08-05", "to": "2026-08-15" }
     ],
     "images": ["https://images.unsplash.com/photo-1566665797739-1674de7a421a"],
-    "description": "Casa tradicional pintoresca en el centro amurallado.",
-    "amenities": ["Bicicletas", "Aire acondicionado", "Cocina"]
+    "description": "Casa tradicional pintoresca en el centro amurallado."
   },
   {
     "id": 22,
@@ -377,13 +354,12 @@ export const properties = [
       { "from": "2026-03-10", "to": "2026-03-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1555854816-802f188095e4"],
-    "description": "Alojamiento sencillo y céntrico para viajeros con presupuesto limitado.",
-    "amenities": ["Desayuno incluido", "Wifi", "Lockers"]
+    "description": "Alojamiento sencillo y céntrico para viajeros con presupuesto limitado."
   },
   {
     "id": 23,
     "rating": 4.9,
-    "name": "Grand Hotel Boutique Puebla ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+    "name": "Grand Hotel Boutique Puebla",
     "city": "Puebla",
     "location": "Puebla",
     "type": "hotel",
@@ -393,8 +369,7 @@ export const properties = [
       { "from": "2026-03-08", "to": "2026-03-19" }
     ],
     "images": ["https://images.unsplash.com/photo-1566073771259-6a8506099945"],
-    "description": "Lujo barroco en el corazón de la ciudad con servicio de guante blanco.",
-    "amenities": ["Spa", "Valet Parking", "Restaurante de Autor"]
+    "description": "Lujo barroco en el corazón de la ciudad con servicio de guante blanco."
   },
   {
     "id": 24,
@@ -409,8 +384,7 @@ export const properties = [
       { "from": "2026-03-10", "to": "2026-03-18" }
     ],
     "images": ["https://images.unsplash.com/photo-1518780664697-55e3ad937233"],
-    "description": "Casa antigua con mantenimiento básico pero excelente ubicación.",
-    "amenities": ["Cocina", "Agua caliente", "Pet Friendly"]
+    "description": "Casa antigua con mantenimiento básico pero excelente ubicación."
   },
   {
     "id": 25,
@@ -425,8 +399,7 @@ export const properties = [
       { "from": "2026-03-10", "to": "2026-03-18" }
     ],
     "images": ["https://images.unsplash.com/photo-1493809842364-78817add7ffb"],
-    "description": "Modernas suites en la zona comercial más importante.",
-    "amenities": ["Gimnasio", "Alberca", "Seguridad"]
+    "description": "Modernas suites en la zona comercial más importante."
   },
   {
     "id": 26,
@@ -441,8 +414,7 @@ export const properties = [
       { "from": "2026-03-05", "to": "2026-03-18" }
     ],
     "images": ["https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af"],
-    "description": "Hotel con temática ecológica y mobiliario reciclado.",
-    "amenities": ["Eco-friendly", "Wifi", "Bicicletas"]
+    "description": "Hotel con temática ecológica y mobiliario reciclado."
   },
   {
     "id": 27,
@@ -457,8 +429,7 @@ export const properties = [
       { "from": "2026-03-10", "to": "2026-03-25" }
     ],
     "images": ["https://images.unsplash.com/photo-1460317442991-0ec209397118"],
-    "description": "Espacio abierto con toques industriales cerca del centro.",
-    "amenities": ["Lavadora", "Smart TV", "Cafetera"]
+    "description": "Espacio abierto con toques industriales cerca del centro."
   },
   {
     "id": 28,
@@ -473,8 +444,7 @@ export const properties = [
       { "from": "2026-03-09", "to": "2026-03-19" }
     ],
     "images": ["https://images.unsplash.com/photo-1512917774080-9991f1c4c750"],
-    "description": "Casa decorada íntegramente con artesanías locales.",
-    "amenities": ["Patio", "Asador", "Wifi"]
+    "description": "Casa decorada íntegramente con artesanías locales."
   },
   {
     "id": 29,
@@ -489,8 +459,7 @@ export const properties = [
       { "from": "2026-04-15", "to": "2026-04-30" }
     ],
     "images": ["https://images.unsplash.com/photo-1505773502619-358aa0955949"],
-    "description": "Alojamiento práctico para paradas rápidas cerca de la frontera.",
-    "amenities": ["Estacionamiento gratuito", "TV", "Aire acondicionado"]
+    "description": "Alojamiento práctico para paradas rápidas cerca de la frontera."
   },
   {
     "id": 30,
@@ -505,8 +474,7 @@ export const properties = [
       { "from": "2026-11-01", "to": "2026-11-15" }
     ],
     "images": ["https://images.unsplash.com/photo-1544984243-ea5bca44a60e"],
-    "description": "Ultra lujo integrado en la selva con vistas al Pacífico.",
-    "amenities": ["Piscina infinita", "Mayordomo", "Playa privada"]
+    "description": "Ultra lujo integrado en la selva con vistas al Pacífico."
   },
   {
     "id": 31,
@@ -521,8 +489,7 @@ export const properties = [
       { "from": "2026-03-20", "to": "2026-03-25" }
     ],
     "images": ["https://images.unsplash.com/photo-1499916078039-922301b0eb9b"],
-    "description": "Cuarto rústico con servicios compartidos.",
-    "amenities": ["Hamaca", "Vistas al Tepozteco"]
+    "description": "Cuarto rústico con servicios compartidos."
   },
   {
     "id": 32,
@@ -537,8 +504,7 @@ export const properties = [
       { "from": "2026-05-10", "to": "2026-05-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1470770841072-f978cf4d019e"],
-    "description": "Domo geodésico bajo las estrellas del altiplano.",
-    "amenities": ["Fogata", "Telescopio", "Cena incluida"]
+    "description": "Domo geodésico bajo las estrellas del altiplano."
   },
   {
     "id": 33,
@@ -553,8 +519,7 @@ export const properties = [
       { "from": "2026-06-05", "to": "2026-06-15" }
     ],
     "images": ["https://images.unsplash.com/photo-1484154218962-a197022b5858"],
-    "description": "Hotel clásico con vistas a la marina.",
-    "amenities": ["Restaurante", "Bar", "Wifi"]
+    "description": "Hotel clásico con vistas a la marina."
   },
   {
     "id": 34,
@@ -569,8 +534,7 @@ export const properties = [
       { "from": "2026-03-12", "to": "2026-03-22" }
     ],
     "images": ["https://images.unsplash.com/photo-1536376074432-bf12177d4f4f"],
-    "description": "Ubicado en el barrio más trendy de la ciudad.",
-    "amenities": ["Terraza", "Workstation", "Cafetera Nespresso"]
+    "description": "Ubicado en el barrio más trendy de la ciudad."
   },
   {
     "id": 35,
@@ -585,8 +549,7 @@ export const properties = [
       { "from": "2026-04-01", "to": "2026-04-30" }
     ],
     "images": ["https://images.unsplash.com/photo-1520173043174-2abc8f653dd8"],
-    "description": "Camas en dormitorio compartido para surfistas.",
-    "amenities": ["Clases de surf", "Cocina comunal", "Barra libre"]
+    "description": "Camas en dormitorio compartido para surfistas."
   },
   {
     "id": 36,
@@ -601,8 +564,7 @@ export const properties = [
       { "from": "2026-11-15", "to": "2026-11-25" }
     ],
     "images": ["https://images.unsplash.com/photo-1523217582562-09d0def993a6"],
-    "description": "Casona restaurada con techos altos y techos de teja.",
-    "amenities": ["Piscina central", "Hamacas", "Clima"]
+    "description": "Casona restaurada con techos altos y techos de teja."
   },
   {
     "id": 37,
@@ -617,8 +579,7 @@ export const properties = [
       { "from": "2026-05-01", "to": "2026-05-10" }
     ],
     "images": ["https://images.unsplash.com/photo-1493236272120-200db0da1927"],
-    "description": "Cerca de centros comerciales y vida nocturna.",
-    "amenities": ["Estacionamiento", "Netflix", "Balcón"]
+    "description": "Cerca de centros comerciales y vida nocturna."
   },
   {
     "id": 38,
@@ -633,8 +594,7 @@ export const properties = [
       { "from": "2026-12-05", "to": "2026-12-15" }
     ],
     "images": ["https://images.unsplash.com/photo-1506905925346-21bda4d32df4"],
-    "description": "Hotel de paso para senderistas del Popocatépetl.",
-    "amenities": ["Guías de montaña", "Restaurante", "Calefacción"]
+    "description": "Hotel de paso para senderistas del Popocatépetl."
   },
   {
     "id": 39,
@@ -649,8 +609,7 @@ export const properties = [
       { "from": "2026-02-10", "to": "2026-02-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1510798831971-661eb04b3739"],
-    "description": "Villa espaciosa con equipo de buceo profesional incluido.",
-    "amenities": ["Muelle propio", "Piscina", "Botes"]
+    "description": "Villa espaciosa con equipo de buceo profesional incluido."
   },
   {
     "id": 40,
@@ -665,8 +624,7 @@ export const properties = [
       { "from": "2026-04-10", "to": "2026-04-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1494526585095-c41746248156"],
-    "description": "Vistas panorámicas a la Parroquia de Santa Prisca.",
-    "amenities": ["Restaurante terraza", "Taller de plata"]
+    "description": "Vistas panorámicas a la Parroquia de Santa Prisca."
   },
   {
     "id": 41,
@@ -681,8 +639,7 @@ export const properties = [
       { "from": "2026-10-05", "to": "2026-10-15" }
     ],
     "images": ["https://images.unsplash.com/photo-1524758631624-e2822e304c36"],
-    "description": "Edificio familiar a cuadras del malecón.",
-    "amenities": ["Cocineta", "A/C", "TV"]
+    "description": "Edificio familiar a cuadras del malecón."
   },
   {
     "id": 42,
@@ -697,8 +654,7 @@ export const properties = [
       { "from": "2026-12-24", "to": "2026-12-31" }
     ],
     "images": ["https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05"],
-    "description": "Cabaña de lujo con acabados en madera y cantera.",
-    "amenities": ["Chimenea", "Cava", "Jacuzzi exterior"]
+    "description": "Cabaña de lujo con acabados en madera y cantera."
   },
   {
     "id": 43,
@@ -713,8 +669,7 @@ export const properties = [
       { "from": "2026-01-15", "to": "2026-01-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1544124499-58912cbddaad"],
-    "description": "Básico para viajes de negocios de última hora.",
-    "amenities": ["Escritorio", "Wifi"]
+    "description": "Básico para viajes de negocios de última hora."
   },
   {
     "id": 44,
@@ -729,8 +684,7 @@ export const properties = [
       { "from": "2026-09-01", "to": "2026-09-10" }
     ],
     "images": ["https://images.unsplash.com/photo-1512918515061-64d858390b14"],
-    "description": "Ubicado en la calle más exclusiva de México.",
-    "amenities": ["Vigilancia", "Elevador privado", "Gimnasio"]
+    "description": "Ubicado en la calle más exclusiva de México."
   },
   {
     "id": 45,
@@ -745,8 +699,7 @@ export const properties = [
       { "from": "2026-08-10", "to": "2026-08-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1506126613408-eca07ce68773"],
-    "description": "Vistas al Pacífico y degustación de vinos locales.",
-    "amenities": ["Alberca", "Spa", "Tours"]
+    "description": "Vistas al Pacífico y degustación de vinos locales."
   },
   {
     "id": 46,
@@ -761,8 +714,7 @@ export const properties = [
       { "from": "2026-11-10", "to": "2026-11-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1444201983204-c43cbd584d93"],
-    "description": "Estilo colonial rústico cerca de los Arcos.",
-    "amenities": ["Wifi", "Cochera", "Patio"]
+    "description": "Estilo colonial rústico cerca de los Arcos."
   },
   {
     "id": 47,
@@ -777,8 +729,7 @@ export const properties = [
       { "from": "2026-05-15", "to": "2026-05-25" }
     ],
     "images": ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"],
-    "description": "En el piso 40 con vista al Cerro de la Silla.",
-    "amenities": ["Cine", "Infinity Pool", "Gimnasio"]
+    "description": "En el piso 40 con vista al Cerro de la Silla."
   },
   {
     "id": 48,
@@ -793,8 +744,7 @@ export const properties = [
       { "from": "2026-03-01", "to": "2026-03-15" }
     ],
     "images": ["https://images.unsplash.com/photo-1520466809213-7b9a56adcd45"],
-    "description": "Eco-hotel económico lejos de la zona de ruido.",
-    "amenities": ["Bicicletas", "Mosquiteros"]
+    "description": "Eco-hotel económico lejos de la zona de ruido."
   },
   {
     "id": 49,
@@ -809,8 +759,7 @@ export const properties = [
       { "from": "2026-02-14", "to": "2026-02-28" }
     ],
     "images": ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"],
-    "description": "Hotel con vistas espectaculares y cena romántica.",
-    "amenities": ["Jacuzzi", "Piscina climatizada", "Restaurante"]
+    "description": "Hotel con vistas espectaculares y cena romántica."
   },
   {
     "id": 50,
@@ -825,8 +774,7 @@ export const properties = [
       { "from": "2026-07-10", "to": "2026-07-20" }
     ],
     "images": ["https://images.unsplash.com/photo-1464146072230-91cabc968266"],
-    "description": "Casa colorida cerca del centro histórico y cenotes.",
-    "amenities": ["Aire acondicionado", "Patio", "Bicicletas"]
+    "description": "Casa colorida cerca del centro histórico y cenotes."
   },
   {
     "id": 51,
@@ -839,8 +787,7 @@ export const properties = [
     "maxGuests": 6,
     "availability": [{ "from": "2026-04-10", "to": "2026-04-25" }],
     "images": ["https://images.unsplash.com/photo-1600585154340-be6161a56a0c"],
-    "description": "Mansión histórica con techos de doble altura y arcos de piedra.",
-    "amenities": ["Biblioteca", "Patio central", "Servicio de limpieza"]
+    "description": "Mansión histórica con techos de doble altura y arcos de piedra."
   },
   {
     "id": 52,
@@ -853,8 +800,7 @@ export const properties = [
     "maxGuests": 2,
     "availability": [{ "from": "2026-03-12", "to": "2026-03-20" }],
     "images": ["https://images.unsplash.com/photo-1512918766671-ad651ec90231"],
-    "description": "Espacio minimalista en edificio del siglo XVIII.",
-    "amenities": ["Wifi 5G", "Cafetera artesanal", "Vista a la catedral"]
+    "description": "Espacio minimalista en edificio del siglo XVIII."
   },
   {
     "id": 53,
@@ -867,8 +813,7 @@ export const properties = [
     "maxGuests": 12,
     "availability": [{ "from": "2026-06-01", "to": "2026-06-15" }],
     "images": ["https://images.unsplash.com/photo-1512917774080-9991f1c4c750"],
-    "description": "Villa ultra moderna con arquitectura de vanguardia frente al mar.",
-    "amenities": ["Infinity Pool", "Cine", "Chef Privado"]
+    "description": "Villa ultra moderna con arquitectura de vanguardia frente al mar."
   },
   {
     "id": 54,
@@ -881,8 +826,7 @@ export const properties = [
     "maxGuests": 4,
     "availability": [{ "from": "2026-03-05", "to": "2026-05-18" }],
     "images": ["https://images.unsplash.com/photo-1523217582562-09d0def993a6"],
-    "description": "Residencia con jar  dín exuberante y azotea con vista a la parroquia.",
-    "amenities": ["Jacuzzi", "Fire pit", "Seguridad"]
+    "description": "Residencia con jardín exuberante y azotea con vista a la parroquia."
   },
   {
     "id": 55,
@@ -895,8 +839,7 @@ export const properties = [
     "maxGuests": 4,
     "availability": [{ "from": "2026-04-15", "to": "2026-04-22" }],
     "images": ["https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"],
-    "description": "Vista ininterrumpida al lago con diseño contemporáneo.",
-    "amenities": ["Muelle", "Chimenea", "Terraza"]
+    "description": "Vista ininterrumpida al lago con diseño contemporáneo."
   },
   {
     "id": 56,
@@ -909,8 +852,7 @@ export const properties = [
     "maxGuests": 2,
     "availability": [{ "from": "2026-03-25", "to": "2026-04-05" }],
     "images": ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"],
-    "description": "Elegancia clásica en el centro histórico.",
-    "amenities": ["Bar", "Restaurante", "Gimnasio"]
+    "description": "Elegancia clásica en el centro histórico."
   },
   {
     "id": 57,
@@ -923,8 +865,7 @@ export const properties = [
     "maxGuests": 5,
     "availability": [{ "from": "2026-05-20", "to": "2026-06-05" }],
     "images": ["https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83"],
-    "description": "Casa de huéspedes rodeada de flora desértica y exótica.",
-    "amenities": ["Piscina", "Wifi", "Asador"]
+    "description": "Casa de huéspedes rodeada de flora desértica y exótica."
   },
   {
     "id": 58,
@@ -937,8 +878,7 @@ export const properties = [
     "maxGuests": 2,
     "availability": [{ "from": "2026-07-01", "to": "2026-07-10" }],
     "images": ["https://images.unsplash.com/photo-1536376074432-bf12177d4f4f"],
-    "description": "Diseño moderno con arte local integrado.",
-    "amenities": ["Balcón", "A/C", "Workstation"]
+    "description": "Diseño moderno con arte local integrado."
   },
   {
     "id": 59,
@@ -951,8 +891,7 @@ export const properties = [
     "maxGuests": 8,
     "availability": [{ "from": "2026-03-10", "to": "2026-03-18" }],
     "images": ["https://images.unsplash.com/photo-1470770841072-f978cf4d019e"],
-    "description": "Cabaña premium en el bosque con arquitectura de cristal.",
-    "amenities": ["Sauna", "Jacuzzi", "Cuatrimotos"]
+    "description": "Cabaña premium en el bosque con arquitectura de cristal."
   },
   {
     "id": 60,
@@ -965,8 +904,7 @@ export const properties = [
     "maxGuests": 6,
     "availability": [{ "from": "2026-03-10", "to": "2026-08-25" }],
     "images": ["https://images.unsplash.com/photo-1571896349842-33c89424de2d"],
-    "description": "Servicio de clase mundial con acceso privado a la bahía.",
-    "amenities": ["Spa", "Club de Niños", "Cancha de Tenis"]
+    "description": "Servicio de clase mundial con acceso privado a la bahía."
   },
   {
     "id": 61,
@@ -979,8 +917,7 @@ export const properties = [
     "maxGuests": 7,
     "availability": [{ "from": "2026-11-01", "to": "2026-11-10" }],
     "images": ["https://images.unsplash.com/photo-1600566753391-7d719b5473bd"],
-    "description": "Amplia casa familiar con vistas espectaculares al teleférico.",
-    "amenities": ["Cochera", "Terraza BBQ", "Lavandería"]
+    "description": "Amplia casa familiar con vistas espectaculares al teleférico."
   },
   {
     "id": 62,
@@ -994,7 +931,7 @@ export const properties = [
     "availability": [{ "from": "2026-09-12", "to": "2026-09-20" }],
     "images": ["https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"],
     "description": "Lujo sofisticado con vista directa al Arco.",
-    "amenities": ["Pool Bar", "Gimnasio", "Restaurante Gourmet"]
+ 
   },
   {
     "id": 63,
@@ -1008,7 +945,7 @@ export const properties = [
     "availability": [{ "from": "2026-04-15", "to": "2026-04-28" }],
     "images": ["https://images.unsplash.com/photo-1566073771259-6a8506099945"],
     "description": "Tranquilidad y tradición en el corazón del pueblo.",
-    "amenities": ["Desayuno", "Patio", "Guías locales"]
+    
   },
   {
     "id": 64,
@@ -1022,7 +959,7 @@ export const properties = [
     "availability": [{ "from": "2026-12-20", "to": "2026-12-30" }],
     "images": ["https://images.unsplash.com/photo-1512915922611-e2c1471852ee"],
     "description": "Residencia de gran tamaño ideal para grupos grandes.",
-    "amenities": ["Piscina climatizada", "Salón de juegos", "Bar"]
+ 
   },
   {
     "id": 65,
@@ -1036,7 +973,7 @@ export const properties = [
     "availability": [{ "from": "2026-03-10", "to": "2026-03-18" }],
     "images": ["https://images.unsplash.com/photo-1493809842364-78817add7ffb"],
     "description": "Decoración zen y ambiente relajado.",
-    "amenities": ["Jacuzzi", "Yoga Deck", "Wifi"]
+ 
   },
   {
     "id": 66,
@@ -1050,7 +987,7 @@ export const properties = [
     "availability": [{ "from": "2026-01-10", "to": "2026-01-20" }],
     "images": ["https://images.unsplash.com/photo-1505691723518-36a5ac3be353"],
     "description": "Hacienda restaurada con establos y jardines.",
-    "amenities": ["Caballos", "Piscina", "Bodega de vinos"]
+  
   },
   {
     "id": 67,
@@ -1064,7 +1001,7 @@ export const properties = [
     "availability": [{ "from": "2026-10-15", "to": "2026-10-25" }],
     "images": ["https://images.unsplash.com/photo-1502672023488-70e25813efdf"],
     "description": "Loft de cristal con la mejor vista nocturna de la ciudad.",
-    "amenities": ["Telescopio", "A/C", "Netflix"]
+ 
   },
   {
     "id": 68,
@@ -1078,7 +1015,7 @@ export const properties = [
     "availability": [{ "from": "2026-02-14", "to": "2026-02-20" }],
     "images": ["https://images.unsplash.com/photo-1549389478-5ad4bd44a5b6"],
     "description": "Experiencia boutique exclusiva para parejas.",
-    "amenities": ["Mayordomo", "Cata de Tequila", "Spa"]
+  
   },
   {
     "id": 69,
@@ -1092,7 +1029,7 @@ export const properties = [
     "availability": [{ "from": "2026-05-10", "to": "2026-05-20" }],
     "images": ["https://images.unsplash.com/photo-1560448204-61dc36dc98c8"],
     "description": "Acceso directo a la arena y piscina comunitaria.",
-    "amenities": ["Kayak", "Snorkel", "Seguridad"]
+    
   },
   {
     "id": 70,
@@ -1106,7 +1043,7 @@ export const properties = [
     "availability": [{ "from": "2026-03-10", "to": "2026-03-18" }],
     "images": ["https://images.unsplash.com/photo-1449156001935-d28705351533"],
     "description": "Casa rústica ideal para amantes de la navegación.",
-    "amenities": ["Lancha propia", "Muelle", "Asador"]
+
   },
   {
     "id": 71,
@@ -1120,7 +1057,7 @@ export const properties = [
     "availability": [{ "from": "2026-11-20", "to": "2026-11-30" }],
     "images": ["https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85"],
     "description": "Pequeño gran lujo en zona peatonal.",
-    "amenities": ["Balcón francés", "Desayunador", "Wifi"]
+  
   },
   {
     "id": 72,
@@ -1134,7 +1071,7 @@ export const properties = [
     "availability": [{ "from": "2026-07-15", "to": "2026-07-25" }],
     "images": ["https://images.unsplash.com/photo-1510798831971-661eb04b3739"],
     "description": "Retiro espiritual con todas las comodidades modernas.",
-    "amenities": ["Sauna seco", "Jacuzzi", "Pista de running"]
+    
   },
   {
     "id": 73,
@@ -1148,7 +1085,7 @@ export const properties = [
     "availability": [{ "from": "2026-04-01", "to": "2026-04-10" }],
     "images": ["https://images.unsplash.com/photo-1520250497591-112f2f40a3f4"],
     "description": "Ubicación inmejorable frente a la plaza principal.",
-    "amenities": ["Patio", "Bar", "Tour de Leyendas"]
+  
   },
   {
     "id": 74,
@@ -1162,7 +1099,7 @@ export const properties = [
     "availability": [{ "from": "2026-09-05", "to": "2026-09-15" }],
     "images": ["https://images.unsplash.com/photo-1554995207-c18c203602cb"],
     "description": "Diseño contemporáneo con vistas 360 de la ciudad.",
-    "amenities": ["Roof Garden", "Lavandería", "A/C"]
+
   },
   {
     "id": 75,
@@ -1176,7 +1113,7 @@ export const properties = [
     "availability": [{ "from": "2026-10-10", "to": "2026-10-20" }],
     "images": ["https://images.unsplash.com/photo-1518780664697-55e3ad937233"],
     "description": "Estilo desértico con acabados en granito y mármol.",
-    "amenities": ["Alberca infinity", "Fogata", "Paddle board"]
+ 
   },
   {
     "id": 76,
@@ -1190,7 +1127,7 @@ export const properties = [
     "availability": [{ "from": "2026-12-01", "to": "2026-12-10" }],
     "images": ["https://images.unsplash.com/photo-1562790351-d273a963e0e9"],
     "description": "Ubicado en una antigua casona minera restaurada.",
-    "amenities": ["Cava subterránea", "Spa", "Tours"]
+
   },
   {
     "id": 77,
@@ -1204,7 +1141,7 @@ export const properties = [
     "availability": [{ "from": "2026-03-10", "to": "2026-03-18" }],
     "images": ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"],
     "description": "Palacio colonial con servicio de personal completo.",
-    "amenities": ["Chef", "Conductor", "Piscina"]
+ 
   },
   {
     "id": 78,
@@ -1218,7 +1155,7 @@ export const properties = [
     "availability": [{ "from": "2026-06-15", "to": "2026-06-25" }],
     "images": ["https://images.unsplash.com/photo-1493236272120-200db0da1927"],
     "description": "Modernidad en un entorno histórico.",
-    "amenities": ["Cocina equipada", "Wifi", "Balcón"]
+
   },
   {
     "id": 79,
@@ -1232,7 +1169,7 @@ export const properties = [
     "availability": [{ "from": "2026-01-05", "to": "2026-01-15" }],
     "images": ["https://images.unsplash.com/photo-1540518614846-7eded433c457"],
     "description": "El epítome del lujo en el Pacífico.",
-    "amenities": ["Helipuerto", "Yate privado", "Restaurante Michelin"]
+
   },
   {
     "id": 80,
@@ -1246,7 +1183,7 @@ export const properties = [
     "availability": [{ "from": "2026-11-05", "to": "2026-11-15" }],
     "images": ["https://images.unsplash.com/photo-1512918766671-ad651ec90231"],
     "description": "Ubicado en la parte alta para la mejor vista del atardecer.",
-    "amenities": ["Alberca infinita", "Parrilla", "Seguridad 24/7"]
+ 
   }
 ];
 

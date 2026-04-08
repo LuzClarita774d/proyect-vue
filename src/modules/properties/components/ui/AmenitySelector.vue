@@ -1,14 +1,10 @@
 <script setup>
-/** * LÓGICA (Script) - El "Cerebro" del componente
- */
-import { computed } from 'vue';
+import {ref, computed } from 'vue';
 import { AMENIDADES_DATA } from '@/modules/properties/data/amenidades.js';
 
-// 1. Estado del Dropdown y Categoría
 const isOpen = ref(false);
 const categoriaActiva = ref('basicas');
 
-// 2. Nombres legibles para el Dropdown
 const categoriasNombres = {
   basicas: 'Básicas',
   comodidad: 'Comodidad',
@@ -19,16 +15,11 @@ const categoriasNombres = {
   limpieza: 'Limpieza'
 };
 
-/**
- * 3. FUNCIÓN DE RUTA DINÁMICA:
- * Como tus iconos están en src/assets/imagenes/iconos, usamos esta función
- * para que Vite encuentre las imágenes correctamente.
- */
+
 const getIconUrl = (nombreIcono) => {
-  return new URL(`../assets/imagenes/iconos/${nombreIcono}`, import.meta.url).href;
+  return new URL(`../../../../assets/imagenes/iconos/${nombreIcono}`, import.meta.url).href;
 };
 
-// 4. FILTRADO: Solo mostramos los primeros 20 de la categoría activa
 const listaFiltrada = computed(() => {
   return AMENIDADES_DATA[categoriaActiva.value]?.slice(0, 20) || [];
 });
@@ -85,12 +76,10 @@ const seleccionarCategoria = (key) => {
 </template>
 
 <style scoped>
-/** * DISEÑO (Style) - Identidad Visual de TRAVEL & LIVE 
- */
 .amenities-module {
   max-width: 800px;
   font-family: 'Marcellus SC', serif;
-  color: #152644; /* Tu azul principal */
+  color: #152644; 
 }
 
 .dropdown-section {
@@ -105,7 +94,7 @@ const seleccionarCategoria = (key) => {
   margin: 0;
 }
 
-/* Estilos del Dropdown */
+
 .dropdown-custom {
   position: relative;
   width: 200px;
@@ -115,7 +104,7 @@ const seleccionarCategoria = (key) => {
   width: 100%;
   padding: 10px 15px;
   background: white;
-  border: 1px solid #7A73B7; /* Tu morado */
+  border: 1px solid #484769; 
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
@@ -161,11 +150,11 @@ const seleccionarCategoria = (key) => {
   margin: 20px 0;
 }
 
-/* EL GRID: 2 columnas, tal cual la imagen */
+
 .amenities-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px 40px; /* 40px de separación entre columnas */
+  gap: 15px 40px; 
 }
 
 .amenity-card {
@@ -185,7 +174,7 @@ const seleccionarCategoria = (key) => {
   color: #333;
 }
 
-/* Animación */
+
 .fade-enter-active, .fade-leave-active { transition: opacity 0.2s; }
 .fade-enter-from, .fade-leave-to { opacity: 0; }
 </style>
