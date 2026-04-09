@@ -11,10 +11,7 @@
           <span class="stat-number">{{ host.rating }}</span>
           <span class="stat-label">Calificación</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">{{ host.joinedDate }}</span>
-          <span class="stat-label">Miembro</span>
-        </div>
+
       </div>
     </div>
 
@@ -38,10 +35,10 @@
         
         <div class="contact-details">
           <p class="contact-item">
-            <span class="icon"><img src="@/assets/imagenes/logos/telefono.png" alt=""></span> {{ host.telefono }}
+            <span class="icon"><img src="@/assets/imagenes/logos/telefono.svg" alt=""></span> {{ host.telefono }}
           </p>
           <p class="contact-item email">
-            <span class="icon"><img src="@/assets/imagenes/logos/correo.png" alt=""</span> {{ host.correo }}
+            <span class="icon"><img src="@/assets/imagenes/logos/correo.svg" alt=""</span> {{ host.correo }}
           </p>
         </div>
 
@@ -151,7 +148,7 @@ const props = defineProps({
 }
 
 .alfition-button {
-  background-color: #059CF3;
+  background-color: #FC8312;
   color: #fff;
   text-align: center;
   text-decoration: none;

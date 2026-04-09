@@ -11,9 +11,10 @@ export const properties = [
     "availability": [
       { "from": "2026-04-05", "to": "2026-04-15" }
     ],
-    "images": ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"],
+
     "description": "Antigua hacienda colonial con jardines exóticos y elegancia rústica."
   },
+  
   {
     "id": 3,
     "rating": 4.7,
@@ -59,16 +60,6 @@ export const properties = [
         "puntuacion": 4.5
       }
     ],
-    "images": [
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
-      "https://images.unsplash.com/photo-1560448204-603b3fc33ddc",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
-      "https://images.unsplash.com/photo-1499916078039-922301b0eb9b"
-    ],
     "description": "Será un gusto recibirte en nuestros departamentos, ubicados en un entorno tranquilo y familiar. Disfruta de nuestra impresionante laguna cristalina tipo playa artificial, ideal para relajarte y pasar momentos inolvidables. Al reservar con nosotros, se te asignarán 3 departamentos completamente independientes, cada uno con 2 recámaras, 2 baños completos, sala, comedor y cocina equipada. Si lo prefieres, también contamos con la opción de 2 departamentos con 3 recámaras. El lugar es 100% familiar y cuenta con vigilancia las 24 horas para tu seguridad. Además, la playa y la zona hotelera se encuentran a solo 20 minutos. Dentro del desarrollo podrás disfrutar de 7 albercas, y tendrás supermercados y servicios muy cercanos para mayor comodidad. Dreams Lagoon destaca por su excelente ubicación, seguridad y ambiente agradable."
   },
   {
@@ -83,7 +74,7 @@ export const properties = [
     "availability": [
       { "from": "2026-06-12", "to": "2026-06-25" }
     ],
-    "images": ["https://images.unsplash.com/photo-1582719508461-905c673771fd"],
+
     "description": "Casa de lujo frente al mar con piscina privada y terraza."
   },
   {
@@ -98,7 +89,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-15", "to": "2026-03-22" }
     ],
-    "images": ["https://images.unsplash.com/photo-1571896349842-33c89424de2d"],
+   
     "description": "Hotel construido en una antigua plaza de toros."
   },
   {
@@ -113,7 +104,7 @@ export const properties = [
     "availability": [
       { "from": "2026-07-01", "to": "2026-07-15" }
     ],
-    "images": ["https://images.unsplash.com/photo-1512918766671-ad651ec90231"],
+    
     "description": "Residencia de lujo con arquitectura colonial y patio interior."
   },
   {
@@ -128,7 +119,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-30", "to": "2026-08-05" }
     ],
-    "images": ["https://images.unsplash.com/photo-1445019980597-93fa8acb246c"],
+  
     "description": "Departamento con vistas al lago y zona de fogata."
   },
   {
@@ -143,7 +134,7 @@ export const properties = [
     "availability": [
       { "from": "2026-10-25", "to": "2026-11-05" }
     ],
-    "images": ["https://images.unsplash.com/photo-1520250497591-112f2f40a3f4"],
+  
     "description": "Hotel con talleres de barro y gastronomía oaxaqueña."
   },
   {
@@ -158,7 +149,7 @@ export const properties = [
     "availability": [
       { "from": "2026-04-10", "to": "2026-04-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1596436889106-be35e843f974"],
+    
     "description": "Departamento económico frente al mar."
   },
   {
@@ -173,7 +164,7 @@ export const properties = [
     "availability": [
       { "from": "2026-12-20", "to": "2026-12-31" }
     ],
-    "images": ["https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd"],
+  
     "description": "Casa sustentable en medio de la selva con cenote cercano."
   },
   {
@@ -188,7 +179,7 @@ export const properties = [
     "availability": [
       { "from": "2026-08-15", "to": "2026-08-30" }
     ],
-    "images": ["https://images.unsplash.com/photo-1551882547-ff43c69e5cfd"],
+
     "description": "Lujo sofisticado sobre Paseo de la Reforma."
   },
   {
@@ -203,7 +194,7 @@ export const properties = [
     "availability": [
       { "from": "2026-02-15", "to": "2026-03-05" }
     ],
-    "images": ["https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"],
+
     "description": "Departamento de lujo con las mejores vistas de la capital."
   },
   {
@@ -218,7 +209,7 @@ export const properties = [
     "availability": [
       { "from": "2026-06-01", "to": "2026-06-15" }
     ],
-    "images": ["https://images.unsplash.com/photo-1499793983690-e29da59ef1c2"],
+    
     "description": "Resort familiar con parque acuático."
   },
   {
@@ -233,7 +224,7 @@ export const properties = [
     "availability": [
       { "from": "2026-09-10", "to": "2026-09-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"],
+
     "description": "Casa privada rodeada de viñedos y bodegas."
   },
   {
@@ -248,7 +239,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-10", "to": "2026-03-18" }
     ],
-    "images": ["https://images.unsplash.com/photo-1549389478-5ad4bd44a5b6"],
+
     "description": "Edificio histórico con arquitectura tradicional."
   },
   {
@@ -263,7 +254,7 @@ export const properties = [
     "availability": [
       { "from": "2026-11-12", "to": "2026-11-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1562790351-d273a963e0e9"],
+
     "description": "Departamento con diseño industrial y techos de doble altura."
   },
   {
@@ -278,7 +269,7 @@ export const properties = [
     "availability": [
       { "from": "2026-04-20", "to": "2026-04-30" }
     ],
-    "images": ["https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9"],
+   
     "description": "Hotel con espectáculos nocturnos y acceso a playa."
   },
   {
@@ -293,7 +284,7 @@ export const properties = [
     "availability": [
       { "from": "2026-05-15", "to": "2026-05-25" }
     ],
-    "images": ["https://images.unsplash.com/photo-1439130490301-25e322d88054"],
+
     "description": "Mansión frente al mar con servicio de staff completo."
   },
   {
@@ -308,7 +299,6 @@ export const properties = [
     "availability": [
       { "from": "2026-10-15", "to": "2026-10-25" }
     ],
-    "images": ["https://images.unsplash.com/photo-1560185007-cde436f6a4d0"],
     "description": "Apartamento acogedor con vista a la catedral de Morelia."
   },
   {
@@ -323,7 +313,7 @@ export const properties = [
     "availability": [
       { "from": "2026-07-20", "to": "2026-07-30" }
     ],
-    "images": ["https://images.unsplash.com/photo-1540518614846-7eded433c457"],
+ 
     "description": "Lujo todo incluido de clase mundial."
   },
   {
@@ -338,7 +328,7 @@ export const properties = [
     "availability": [
       { "from": "2026-08-05", "to": "2026-08-15" }
     ],
-    "images": ["https://images.unsplash.com/photo-1566665797739-1674de7a421a"],
+    
     "description": "Casa tradicional pintoresca en el centro amurallado."
   },
   {
@@ -353,7 +343,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-10", "to": "2026-03-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1555854816-802f188095e4"],
+
     "description": "Alojamiento sencillo y céntrico para viajeros con presupuesto limitado."
   },
   {
@@ -368,7 +358,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-08", "to": "2026-03-19" }
     ],
-    "images": ["https://images.unsplash.com/photo-1566073771259-6a8506099945"],
+   
     "description": "Lujo barroco en el corazón de la ciudad con servicio de guante blanco."
   },
   {
@@ -383,7 +373,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-10", "to": "2026-03-18" }
     ],
-    "images": ["https://images.unsplash.com/photo-1518780664697-55e3ad937233"],
+ 
     "description": "Casa antigua con mantenimiento básico pero excelente ubicación."
   },
   {
@@ -398,7 +388,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-10", "to": "2026-03-18" }
     ],
-    "images": ["https://images.unsplash.com/photo-1493809842364-78817add7ffb"],
+    
     "description": "Modernas suites en la zona comercial más importante."
   },
   {
@@ -413,7 +403,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-05", "to": "2026-03-18" }
     ],
-    "images": ["https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af"],
+   
     "description": "Hotel con temática ecológica y mobiliario reciclado."
   },
   {
@@ -428,7 +418,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-10", "to": "2026-03-25" }
     ],
-    "images": ["https://images.unsplash.com/photo-1460317442991-0ec209397118"],
+
     "description": "Espacio abierto con toques industriales cerca del centro."
   },
   {
@@ -443,7 +433,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-09", "to": "2026-03-19" }
     ],
-    "images": ["https://images.unsplash.com/photo-1512917774080-9991f1c4c750"],
+    
     "description": "Casa decorada íntegramente con artesanías locales."
   },
   {
@@ -458,7 +448,7 @@ export const properties = [
     "availability": [
       { "from": "2026-04-15", "to": "2026-04-30" }
     ],
-    "images": ["https://images.unsplash.com/photo-1505773502619-358aa0955949"],
+   
     "description": "Alojamiento práctico para paradas rápidas cerca de la frontera."
   },
   {
@@ -473,7 +463,7 @@ export const properties = [
     "availability": [
       { "from": "2026-11-01", "to": "2026-11-15" }
     ],
-    "images": ["https://images.unsplash.com/photo-1544984243-ea5bca44a60e"],
+    
     "description": "Ultra lujo integrado en la selva con vistas al Pacífico."
   },
   {
@@ -488,7 +478,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-20", "to": "2026-03-25" }
     ],
-    "images": ["https://images.unsplash.com/photo-1499916078039-922301b0eb9b"],
+    
     "description": "Cuarto rústico con servicios compartidos."
   },
   {
@@ -503,7 +493,7 @@ export const properties = [
     "availability": [
       { "from": "2026-05-10", "to": "2026-05-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1470770841072-f978cf4d019e"],
+    
     "description": "Domo geodésico bajo las estrellas del altiplano."
   },
   {
@@ -518,7 +508,7 @@ export const properties = [
     "availability": [
       { "from": "2026-06-05", "to": "2026-06-15" }
     ],
-    "images": ["https://images.unsplash.com/photo-1484154218962-a197022b5858"],
+    
     "description": "Hotel clásico con vistas a la marina."
   },
   {
@@ -533,7 +523,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-12", "to": "2026-03-22" }
     ],
-    "images": ["https://images.unsplash.com/photo-1536376074432-bf12177d4f4f"],
+  
     "description": "Ubicado en el barrio más trendy de la ciudad."
   },
   {
@@ -548,7 +538,7 @@ export const properties = [
     "availability": [
       { "from": "2026-04-01", "to": "2026-04-30" }
     ],
-    "images": ["https://images.unsplash.com/photo-1520173043174-2abc8f653dd8"],
+   
     "description": "Camas en dormitorio compartido para surfistas."
   },
   {
@@ -563,7 +553,7 @@ export const properties = [
     "availability": [
       { "from": "2026-11-15", "to": "2026-11-25" }
     ],
-    "images": ["https://images.unsplash.com/photo-1523217582562-09d0def993a6"],
+    
     "description": "Casona restaurada con techos altos y techos de teja."
   },
   {
@@ -578,7 +568,7 @@ export const properties = [
     "availability": [
       { "from": "2026-05-01", "to": "2026-05-10" }
     ],
-    "images": ["https://images.unsplash.com/photo-1493236272120-200db0da1927"],
+    
     "description": "Cerca de centros comerciales y vida nocturna."
   },
   {
@@ -593,7 +583,7 @@ export const properties = [
     "availability": [
       { "from": "2026-12-05", "to": "2026-12-15" }
     ],
-    "images": ["https://images.unsplash.com/photo-1506905925346-21bda4d32df4"],
+
     "description": "Hotel de paso para senderistas del Popocatépetl."
   },
   {
@@ -608,7 +598,7 @@ export const properties = [
     "availability": [
       { "from": "2026-02-10", "to": "2026-02-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1510798831971-661eb04b3739"],
+   
     "description": "Villa espaciosa con equipo de buceo profesional incluido."
   },
   {
@@ -623,7 +613,7 @@ export const properties = [
     "availability": [
       { "from": "2026-04-10", "to": "2026-04-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1494526585095-c41746248156"],
+    
     "description": "Vistas panorámicas a la Parroquia de Santa Prisca."
   },
   {
@@ -638,7 +628,7 @@ export const properties = [
     "availability": [
       { "from": "2026-10-05", "to": "2026-10-15" }
     ],
-    "images": ["https://images.unsplash.com/photo-1524758631624-e2822e304c36"],
+ 
     "description": "Edificio familiar a cuadras del malecón."
   },
   {
@@ -653,7 +643,7 @@ export const properties = [
     "availability": [
       { "from": "2026-12-24", "to": "2026-12-31" }
     ],
-    "images": ["https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05"],
+
     "description": "Cabaña de lujo con acabados en madera y cantera."
   },
   {
@@ -668,7 +658,7 @@ export const properties = [
     "availability": [
       { "from": "2026-01-15", "to": "2026-01-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1544124499-58912cbddaad"],
+  
     "description": "Básico para viajes de negocios de última hora."
   },
   {
@@ -683,7 +673,7 @@ export const properties = [
     "availability": [
       { "from": "2026-09-01", "to": "2026-09-10" }
     ],
-    "images": ["https://images.unsplash.com/photo-1512918515061-64d858390b14"],
+  
     "description": "Ubicado en la calle más exclusiva de México."
   },
   {
@@ -698,7 +688,7 @@ export const properties = [
     "availability": [
       { "from": "2026-08-10", "to": "2026-08-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1506126613408-eca07ce68773"],
+    
     "description": "Vistas al Pacífico y degustación de vinos locales."
   },
   {
@@ -713,7 +703,7 @@ export const properties = [
     "availability": [
       { "from": "2026-11-10", "to": "2026-11-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1444201983204-c43cbd584d93"],
+ 
     "description": "Estilo colonial rústico cerca de los Arcos."
   },
   {
@@ -728,7 +718,7 @@ export const properties = [
     "availability": [
       { "from": "2026-05-15", "to": "2026-05-25" }
     ],
-    "images": ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"],
+  
     "description": "En el piso 40 con vista al Cerro de la Silla."
   },
   {
@@ -743,7 +733,7 @@ export const properties = [
     "availability": [
       { "from": "2026-03-01", "to": "2026-03-15" }
     ],
-    "images": ["https://images.unsplash.com/photo-1520466809213-7b9a56adcd45"],
+   
     "description": "Eco-hotel económico lejos de la zona de ruido."
   },
   {
@@ -758,7 +748,7 @@ export const properties = [
     "availability": [
       { "from": "2026-02-14", "to": "2026-02-28" }
     ],
-    "images": ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"],
+   
     "description": "Hotel con vistas espectaculares y cena romántica."
   },
   {
@@ -773,7 +763,7 @@ export const properties = [
     "availability": [
       { "from": "2026-07-10", "to": "2026-07-20" }
     ],
-    "images": ["https://images.unsplash.com/photo-1464146072230-91cabc968266"],
+   
     "description": "Casa colorida cerca del centro histórico y cenotes."
   },
   {
@@ -786,7 +776,7 @@ export const properties = [
     "price": 6200,
     "maxGuests": 6,
     "availability": [{ "from": "2026-04-10", "to": "2026-04-25" }],
-    "images": ["https://images.unsplash.com/photo-1600585154340-be6161a56a0c"],
+  
     "description": "Mansión histórica con techos de doble altura y arcos de piedra."
   },
   {
@@ -799,7 +789,7 @@ export const properties = [
     "price": 2800,
     "maxGuests": 2,
     "availability": [{ "from": "2026-03-12", "to": "2026-03-20" }],
-    "images": ["https://images.unsplash.com/photo-1512918766671-ad651ec90231"],
+    
     "description": "Espacio minimalista en edificio del siglo XVIII."
   },
   {
@@ -812,7 +802,7 @@ export const properties = [
     "price": 22000,
     "maxGuests": 12,
     "availability": [{ "from": "2026-06-01", "to": "2026-06-15" }],
-    "images": ["https://images.unsplash.com/photo-1512917774080-9991f1c4c750"],
+   
     "description": "Villa ultra moderna con arquitectura de vanguardia frente al mar."
   },
   {
@@ -825,7 +815,7 @@ export const properties = [
     "price": 8500,
     "maxGuests": 4,
     "availability": [{ "from": "2026-03-05", "to": "2026-05-18" }],
-    "images": ["https://images.unsplash.com/photo-1523217582562-09d0def993a6"],
+    
     "description": "Residencia con jardín exuberante y azotea con vista a la parroquia."
   },
   {
@@ -838,7 +828,7 @@ export const properties = [
     "price": 5800,
     "maxGuests": 4,
     "availability": [{ "from": "2026-04-15", "to": "2026-04-22" }],
-    "images": ["https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"],
+    
     "description": "Vista ininterrumpida al lago con diseño contemporáneo."
   },
   {
@@ -851,7 +841,7 @@ export const properties = [
     "price": 3100,
     "maxGuests": 2,
     "availability": [{ "from": "2026-03-25", "to": "2026-04-05" }],
-    "images": ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"],
+
     "description": "Elegancia clásica en el centro histórico."
   },
   {
@@ -863,8 +853,7 @@ export const properties = [
     "type": "casa",
     "price": 4500,
     "maxGuests": 5,
-    "availability": [{ "from": "2026-05-20", "to": "2026-06-05" }],
-    "images": ["https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83"],
+  
     "description": "Casa de huéspedes rodeada de flora desértica y exótica."
   },
   {
@@ -877,7 +866,7 @@ export const properties = [
     "price": 3400,
     "maxGuests": 2,
     "availability": [{ "from": "2026-07-01", "to": "2026-07-10" }],
-    "images": ["https://images.unsplash.com/photo-1536376074432-bf12177d4f4f"],
+   
     "description": "Diseño moderno con arte local integrado."
   },
   {
@@ -890,7 +879,7 @@ export const properties = [
     "price": 12500,
     "maxGuests": 8,
     "availability": [{ "from": "2026-03-10", "to": "2026-03-18" }],
-    "images": ["https://images.unsplash.com/photo-1470770841072-f978cf4d019e"],
+ 
     "description": "Cabaña premium en el bosque con arquitectura de cristal."
   },
   {
@@ -903,7 +892,7 @@ export const properties = [
     "price": 14200,
     "maxGuests": 6,
     "availability": [{ "from": "2026-03-10", "to": "2026-08-25" }],
-    "images": ["https://images.unsplash.com/photo-1571896349842-33c89424de2d"],
+   
     "description": "Servicio de clase mundial con acceso privado a la bahía."
   },
   {
@@ -916,7 +905,7 @@ export const properties = [
     "price": 5200,
     "maxGuests": 7,
     "availability": [{ "from": "2026-11-01", "to": "2026-11-10" }],
-    "images": ["https://images.unsplash.com/photo-1600566753391-7d719b5473bd"],
+
     "description": "Amplia casa familiar con vistas espectaculares al teleférico."
   },
   {
@@ -929,7 +918,7 @@ export const properties = [
     "price": 18500,
     "maxGuests": 4,
     "availability": [{ "from": "2026-09-12", "to": "2026-09-20" }],
-    "images": ["https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"],
+    
     "description": "Lujo sofisticado con vista directa al Arco.",
  
   },
@@ -943,7 +932,7 @@ export const properties = [
     "price": 2300,
     "maxGuests": 3,
     "availability": [{ "from": "2026-04-15", "to": "2026-04-28" }],
-    "images": ["https://images.unsplash.com/photo-1566073771259-6a8506099945"],
+  
     "description": "Tranquilidad y tradición en el corazón del pueblo.",
     
   },
@@ -957,7 +946,7 @@ export const properties = [
     "price": 11000,
     "maxGuests": 10,
     "availability": [{ "from": "2026-12-20", "to": "2026-12-30" }],
-    "images": ["https://images.unsplash.com/photo-1512915922611-e2c1471852ee"],
+  
     "description": "Residencia de gran tamaño ideal para grupos grandes.",
  
   },
@@ -971,7 +960,7 @@ export const properties = [
     "price": 3900,
     "maxGuests": 4,
     "availability": [{ "from": "2026-03-10", "to": "2026-03-18" }],
-    "images": ["https://images.unsplash.com/photo-1493809842364-78817add7ffb"],
+
     "description": "Decoración zen y ambiente relajado.",
  
   },
@@ -985,7 +974,7 @@ export const properties = [
     "price": 5800,
     "maxGuests": 6,
     "availability": [{ "from": "2026-01-10", "to": "2026-01-20" }],
-    "images": ["https://images.unsplash.com/photo-1505691723518-36a5ac3be353"],
+
     "description": "Hacienda restaurada con establos y jardines.",
   
   },
@@ -999,7 +988,7 @@ export const properties = [
     "price": 4100,
     "maxGuests": 3,
     "availability": [{ "from": "2026-10-15", "to": "2026-10-25" }],
-    "images": ["https://images.unsplash.com/photo-1502672023488-70e25813efdf"],
+
     "description": "Loft de cristal con la mejor vista nocturna de la ciudad.",
  
   },
@@ -1013,7 +1002,7 @@ export const properties = [
     "price": 15500,
     "maxGuests": 2,
     "availability": [{ "from": "2026-02-14", "to": "2026-02-20" }],
-    "images": ["https://images.unsplash.com/photo-1549389478-5ad4bd44a5b6"],
+ 
     "description": "Experiencia boutique exclusiva para parejas.",
   
   },
@@ -1027,7 +1016,7 @@ export const properties = [
     "price": 7200,
     "maxGuests": 5,
     "availability": [{ "from": "2026-05-10", "to": "2026-05-20" }],
-    "images": ["https://images.unsplash.com/photo-1560448204-61dc36dc98c8"],
+
     "description": "Acceso directo a la arena y piscina comunitaria.",
     
   },
@@ -1041,7 +1030,7 @@ export const properties = [
     "price": 4800,
     "maxGuests": 5,
     "availability": [{ "from": "2026-03-10", "to": "2026-03-18" }],
-    "images": ["https://images.unsplash.com/photo-1449156001935-d28705351533"],
+
     "description": "Casa rústica ideal para amantes de la navegación.",
 
   },
@@ -1055,7 +1044,7 @@ export const properties = [
     "price": 2500,
     "maxGuests": 2,
     "availability": [{ "from": "2026-11-20", "to": "2026-11-30" }],
-    "images": ["https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85"],
+
     "description": "Pequeño gran lujo en zona peatonal.",
   
   },
@@ -1069,7 +1058,7 @@ export const properties = [
     "price": 9200,
     "maxGuests": 4,
     "availability": [{ "from": "2026-07-15", "to": "2026-07-25" }],
-    "images": ["https://images.unsplash.com/photo-1510798831971-661eb04b3739"],
+   
     "description": "Retiro espiritual con todas las comodidades modernas.",
     
   },
@@ -1083,7 +1072,7 @@ export const properties = [
     "price": 2100,
     "maxGuests": 4,
     "availability": [{ "from": "2026-04-01", "to": "2026-04-10" }],
-    "images": ["https://images.unsplash.com/photo-1520250497591-112f2f40a3f4"],
+
     "description": "Ubicación inmejorable frente a la plaza principal.",
   
   },
@@ -1097,7 +1086,7 @@ export const properties = [
     "price": 4200,
     "maxGuests": 3,
     "availability": [{ "from": "2026-09-05", "to": "2026-09-15" }],
-    "images": ["https://images.unsplash.com/photo-1554995207-c18c203602cb"],
+
     "description": "Diseño contemporáneo con vistas 360 de la ciudad.",
 
   },
@@ -1111,7 +1100,7 @@ export const properties = [
     "price": 13500,
     "maxGuests": 8,
     "availability": [{ "from": "2026-10-10", "to": "2026-10-20" }],
-    "images": ["https://images.unsplash.com/photo-1518780664697-55e3ad937233"],
+
     "description": "Estilo desértico con acabados en granito y mármol.",
  
   },
@@ -1125,7 +1114,6 @@ export const properties = [
     "price": 4500,
     "maxGuests": 2,
     "availability": [{ "from": "2026-12-01", "to": "2026-12-10" }],
-    "images": ["https://images.unsplash.com/photo-1562790351-d273a963e0e9"],
     "description": "Ubicado en una antigua casona minera restaurada.",
 
   },
@@ -1139,7 +1127,6 @@ export const properties = [
     "price": 19000,
     "maxGuests": 10,
     "availability": [{ "from": "2026-03-10", "to": "2026-03-18" }],
-    "images": ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"],
     "description": "Palacio colonial con servicio de personal completo.",
  
   },
@@ -1153,7 +1140,6 @@ export const properties = [
     "price": 3100,
     "maxGuests": 4,
     "availability": [{ "from": "2026-06-15", "to": "2026-06-25" }],
-    "images": ["https://images.unsplash.com/photo-1493236272120-200db0da1927"],
     "description": "Modernidad en un entorno histórico.",
 
   },
@@ -1167,9 +1153,7 @@ export const properties = [
     "price": 28000,
     "maxGuests": 6,
     "availability": [{ "from": "2026-01-05", "to": "2026-01-15" }],
-    "images": ["https://images.unsplash.com/photo-1540518614846-7eded433c457"],
     "description": "El epítome del lujo en el Pacífico.",
-
   },
   {
     "id": 80,
@@ -1181,7 +1165,6 @@ export const properties = [
     "price": 5200,
     "maxGuests": 6,
     "availability": [{ "from": "2026-11-05", "to": "2026-11-15" }],
-    "images": ["https://images.unsplash.com/photo-1512918766671-ad651ec90231"],
     "description": "Ubicado en la parte alta para la mejor vista del atardecer.",
  
   }

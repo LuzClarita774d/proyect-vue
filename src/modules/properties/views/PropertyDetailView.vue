@@ -2,24 +2,11 @@
   <div v-if="property" class="detail">
 
 
-    <div class="gallery">
-      <div class="thumbnails">
-        <img 
-          v-for="(img, index) in property.images.slice(1, 5)"
-          :key="index"
-          :src="img"
-        />
-      </div>
+<Gallery 
+  :propertyId="property.id"
+  :rating="property.rating"
+/>
 
-      <div class="main-image">
-        <img :src="property.images[0]" />
-        <div class="rating">
-          <img src="@/assets/imagenes/logos/estrella.svg" />
-          <span>{{ property.rating }}</span>
-        </div>
-        <button class="btn">Ver más</button>
-      </div>
-    </div>
 
 
     <div class="content">
@@ -86,6 +73,7 @@
 import { computed } from 'vue'
 import { getPropertyById } from '../services/propertyService'
 import { useRouter } from "vue-router"
+import Gallery from '@/modules/properties/components/gallery/Gallery.vue'
 import ReservationCard from '@/modules/properties/components/ui/ReservationCard.vue'
 import DescriptionCard from '@/modules/properties/components/ui/DescriptionCard.vue'
 import AlfitionesCard from '@/modules/properties/components/ui/AlfitionesCard.vue'
@@ -95,9 +83,10 @@ const router = useRouter()
 function goToHostProfile(hostId) {
   router.push(`/host/${hostId}`)
 }
-
+/* Esto es de gallery */
 const props = defineProps({
   id: String
+  
 })
 
 const property = computed(() => {
@@ -146,7 +135,7 @@ function goToCheckout(data){
 .amenities-section {
   margin: 40px 0;
   padding: 20px;
-  border-top: 1px solid #eee; /* Una línea sutil para separar secciones */
+  border-top: 1px solid #eee; 
 }
 .icons {
   display: flex;
@@ -183,64 +172,10 @@ function goToCheckout(data){
   margin: auto;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 15px;
-  margin-top: 20px;
-}
 
-.thumbnails {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
-.thumbnails img {
-  width: 100%;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 12px;
-  cursor: pointer;
-}
 
-.main-image {
-  position: relative;
-}
 
-.main-image img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-.rating {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.rating img {
-  width: 15px;
-  height: 15px;
-}
-
-.btn {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: orange;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-}
 
 .content {
   display: grid;

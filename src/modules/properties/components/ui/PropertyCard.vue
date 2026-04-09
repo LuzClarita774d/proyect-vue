@@ -5,7 +5,7 @@
 
   <div class="image-container">
 
-  <img :src="property.images[0]" />
+<img :src="mainImage?.url" />
 
   <div class="rating">
     <img src="@/assets/imagenes/logos/estrella.svg" class="star"/>
@@ -44,6 +44,8 @@
 
 import { useRouter } from 'vue-router'
 import { computed } from 'vue'
+import { getMainImage } from '@/modules/properties/services/imageService'
+const mainImage = computed(() => getMainImage(props.property.id))
 
 const props = defineProps({
   property: Object,

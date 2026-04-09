@@ -5,6 +5,7 @@ import PropertyDetailView from '@/modules/properties/views/PropertyDetailView.vu
 import ResultsView from '@/modules/properties/views/ResultsView.vue'
 import CheckoutView from '@/modules/properties/views/CheckoutView.vue'
 import HostView from '@/modules/properties/views/HostView.vue'
+import PropertyGalleryView from '@/modules/properties/views/PropertyGalleryView.vue'
 const routes = [
 
 {
@@ -37,7 +38,13 @@ const routes = [
   name: 'host',
   component: HostView,
   meta: { header: 'default' }
-}
+},
+{
+  path: '/property/:id/gallery',
+  name: 'property-gallery',
+  component: PropertyGalleryView,
+  props: true
+},
 ]
 
 const router = createRouter({
