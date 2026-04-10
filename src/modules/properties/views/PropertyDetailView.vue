@@ -1,4 +1,55 @@
+<script setup>
+import { computed } from 'vue'
+import { getPropertyById } from '../services/propertyService'
+import { useRouter } from "vue-router"
+import Gallery from '@/modules/properties/components/gallery/Gallery.vue'
+import ReservationCard from '@/modules/properties/components/ui/ReservationCard.vue'
+import DescriptionCard from '@/modules/properties/components/ui/DescriptionCard.vue'
+import AlfitionesCard from '@/modules/properties/components/ui/AlfitionesCard.vue'
+import AmenitySelector from '@/modules/properties/components/ui/AmenitySelector.vue'
+const router = useRouter()
+
+
+/* Esto es de amenidades*/
+const props = defineProps({
+
+
+
+  
+  id: {
+    type: String,
+    required: true
+  }
+});
+
+const property = computed(() => {
+  return getPropertyById(props.id)
+})
+function goToHostProfile(hostId) {
+  router.push(`/host/${hostId}`)
+}
+
+function goToCheckout(data){
+  router.push({
+    name: "checkout",
+    query: {
+      name: data.property.name,
+      checkIn: data.checkIn,
+      checkOut: data.checkOut,
+      guests: data.guests,
+      nights: data.nights,
+      total: data.total
+    }
+  })
+}
+</script>
+
+
+
+
+
 <template>
+
   <div v-if="property" class="detail">
 
 
@@ -7,11 +58,7 @@
   :rating="property.rating"
 />
 
-
-
     <div class="content">
-
-
       <div class="info">
 <div class="property-container">
   <div class="header-inline">
@@ -37,15 +84,15 @@
   <hr class="separator">
 </div>
 
- <DescriptionCard :text="property.description" />
+
+<div class="property-detail">
+    <DescriptionCard :id="props.id" />
+  </div>
+
  <hr class="separator">
       
 
-<div class="property-detail-page">
-  <section class="amenities-section">
-    <AmenitySelector />
-  </section>
-</div>
+<AmenitySelector :id="id" />
 
           <hr class="separator">
 
@@ -69,45 +116,8 @@
   </div>
 </template>
 
-<script setup>
-import { computed } from 'vue'
-import { getPropertyById } from '../services/propertyService'
-import { useRouter } from "vue-router"
-import Gallery from '@/modules/properties/components/gallery/Gallery.vue'
-import ReservationCard from '@/modules/properties/components/ui/ReservationCard.vue'
-import DescriptionCard from '@/modules/properties/components/ui/DescriptionCard.vue'
-import AlfitionesCard from '@/modules/properties/components/ui/AlfitionesCard.vue'
-import AmenitySelector from '@/modules/properties/components/ui/AmenitySelector.vue'
-const router = useRouter()
-
-function goToHostProfile(hostId) {
-  router.push(`/host/${hostId}`)
-}
-/* Esto es de gallery */
-const props = defineProps({
-  id: String
-  
-})
-
-const property = computed(() => {
-  return getPropertyById(props.id)
-})
 
 
-function goToCheckout(data){
-  router.push({
-    name: "checkout",
-    query: {
-      name: data.property.name,
-      checkIn: data.checkIn,
-      checkOut: data.checkOut,
-      guests: data.guests,
-      nights: data.nights,
-      total: data.total
-    }
-  })
-}
-</script>
 
 <style scoped>
 
@@ -171,11 +181,6 @@ function goToCheckout(data){
   max-width: 1200px;
   margin: auto;
 }
-
-
-
-
-
 
 .content {
   display: grid;

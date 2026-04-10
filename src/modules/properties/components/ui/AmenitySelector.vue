@@ -1,6 +1,15 @@
 <script setup>
-import {ref, computed } from 'vue';
+import { ref, computed } from 'vue';
 import { AMENIDADES_DATA } from '@/modules/properties/data/amenidades.js';
+import { property_details } from '@/modules/properties/data/propertyDetails.js';
+import vIcon from "@/assets/imagenes/logos/v.svg"; // Importación del icono
+
+const props = defineProps({
+  id: {
+    type: [Number, String],
+    required: true
+  }
+});
 
 const isOpen = ref(false);
 const categoriaActiva = ref('basicas');
@@ -15,34 +24,43 @@ const categoriasNombres = {
   limpieza: 'Limpieza'
 };
 
+const misAmenidadesIds = computed(() => {
+  const detalle = property_details.find(d => Number(d.propertyId) === Number(props.id));
+  return detalle?.amenidadesid || []; 
+});
+
+const listaFiltrada = computed(() => {
+  const todasEnCategoria = AMENIDADES_DATA[categoriaActiva.value] || [];
+  return todasEnCategoria.filter(amenidad => 
+    misAmenidadesIds.value.includes(amenidad.id)
+  );
+});
 
 const getIconUrl = (nombreIcono) => {
   return new URL(`../../../../assets/imagenes/iconos/${nombreIcono}`, import.meta.url).href;
 };
-
-const listaFiltrada = computed(() => {
-  return AMENIDADES_DATA[categoriaActiva.value]?.slice(0, 20) || [];
-});
 
 const seleccionarCategoria = (key) => {
   categoriaActiva.value = key;
   isOpen.value = false;
 };
 </script>
-
 <template>
   <div class="amenities-module">
-    
-    <div class="dropdown-section">
-      <h3 class="title">Amenidades</h3>
-      
+    <div class="header-container">
       <div class="dropdown-custom">
-        <button @click="isOpen = !isOpen" class="dropdown-trigger">
-          {{ categoriasNombres[categoriaActiva] }}
-          <span :class="['arrow', { rotate: isOpen }]">v</span>
-        </button>
+        <div @click="isOpen = !isOpen" class="dropdown-trigger">
+          <div class="title-wrapper">
+            <h3 class="title">Amenidades</h3>
+            <img 
+              :src="vIcon" 
+              alt="v" 
+              :class="['arrow-icon', { rotate: isOpen }]" 
+            />
+          </div>
+        </div>
 
-        <Transition name="fade">
+        <Transition name="dropdown-slide">
           <ul v-if="isOpen" class="dropdown-menu">
             <li 
               v-for="(label, key) in categoriasNombres" 
@@ -55,126 +73,172 @@ const seleccionarCategoria = (key) => {
           </ul>
         </Transition>
       </div>
+      
+      <span class="current-category">{{ categoriasNombres[categoriaActiva] }}</span>
     </div>
-
-    <hr class="divider" />
 
     <div class="amenities-grid">
-      <div 
-        v-for="item in listaFiltrada" 
-        :key="item.id" 
-        class="amenity-card"
-      >
-        <div class="icon-wrapper">
-          <img :src="getIconUrl(item.icono)" :alt="item.nombre" />
+      <template v-if="listaFiltrada.length > 0">
+        <div 
+          v-for="item in listaFiltrada" 
+          :key="item.id" 
+          class="amenity-card"
+        >
+          <div class="icon-wrapper">
+            <img :src="getIconUrl(item.icono)" :alt="item.nombre" />
+          </div>
+          <span class="amenity-name">{{ item.nombre }}</span>
         </div>
-        <span class="amenity-name">{{ item.nombre }}</span>
-      </div>
+      </template>
+      
+      <p v-else class="no-amenities">No se incluyen amenidades de esta categoría.</p>
     </div>
-
   </div>
 </template>
 
 <style scoped>
 .amenities-module {
   max-width: 800px;
-  font-family: 'Marcellus SC', serif;
-  color: #152644; 
+  padding: 10px;
 }
 
-.dropdown-section {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 15px;
+.header-container {
+  margin-bottom: 25px;
 }
-
-.title {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
 
 .dropdown-custom {
   position: relative;
-  width: 200px;
+  display: inline-block;
 }
 
-.dropdown-trigger {
-  width: 100%;
-  padding: 10px 15px;
-  background: white;
-  border: 1px solid #484769; 
-  border-radius: 4px;
+.title-wrapper {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
   cursor: pointer;
-  color: #152644;
-  font-family: inherit;
+  user-select: none;
 }
 
-.arrow {
-  transition: transform 0.3s;
-  font-size: 0.8rem;
+.title { 
+  font-family:'Poppins-Regular';
+  font-size: 18px;
+  color: #484769;
+  margin: 0;
+  font-weight: 500;
 }
-.arrow.rotate { transform: rotate(180deg); }
+
+.arrow-icon {
+  width: 14px;
+  height: auto;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Movimiento elatico */
+}
+
+.arrow-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.current-category {
+  display: block;
+  font-family: 'Gotham-Rounded-Light', sans-serif;
+  color: #484769;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+}
+
 
 .dropdown-menu {
   position: absolute;
-  top: 110%;
+  top: 120%;
   left: 0;
-  width: 100%;
+  min-width: 200px;
   background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  z-index: 10;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(72, 71, 105, 0.15); /* Sombra con el color de tu marca */
+  z-index: 50;
   list-style: none;
-  padding: 0;
+  padding: 10px 0;
+  margin: 0;
+  border: 1px solid rgba(72, 71, 105, 0.05);
 }
 
 .dropdown-menu li {
-  padding: 10px 15px;
+  padding: 12px 20px;
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 0.9rem;
+  color: #484769;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.dropdown-menu li:hover, .dropdown-menu li.active {
-  background: #7A73B7;
+
+.dropdown-menu li:hover {
+  background: #f4f4f9;
+  padding-left: 28px; 
+  color: #484769;
+}
+
+.dropdown-menu li.active {
+  background: #484769;
   color: white;
+  font-weight: 500;
 }
 
-.divider {
-  border: 0;
-  border-top: 1px solid #eee;
-  margin: 20px 0;
+.dropdown-slide-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.dropdown-slide-leave-active {
+  transition: all 0.2s ease-in;
+}
+
+.dropdown-slide-enter-from {
+  opacity: 0;
+  transform: translateY(-15px); 
+}
+
+.dropdown-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
 
 .amenities-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px 40px; 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 45px;
 }
 
 .amenity-card {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  transition: transform 0.2s ease;
+}
+
+.amenity-card:hover {
+  transform: translateX(5px);
 }
 
 .icon-wrapper img {
   width: 24px;
   height: 24px;
   object-fit: contain;
+  opacity: 0.9;
 }
 
 .amenity-name {
-  font-size: 1rem;
-  color: #333;
+  font-family: 'Gotham-Rounded-Light', sans-serif;
+  font-size: 0.95rem;
+  color: #484769;
 }
 
-
-.fade-enter-active, .fade-leave-active { transition: opacity 0.2s; }
-.fade-enter-from, .fade-leave-to { opacity: 0; }
+.no-amenities {
+  font-family: 'Gotham-Rounded-Light', sans-serif;
+  color: #333233;
+  opacity: 0.5;
+  font-style: italic;
+}
 </style>
