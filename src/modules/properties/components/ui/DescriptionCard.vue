@@ -1,22 +1,34 @@
 <script setup>
-import { ref, computed, watch } from "vue"
+import { ref, computed } from "vue"
 
-/* PROPS AYUDA Q SE VEA  */
+
+import { properties } from '@/modules/properties/data/properties.js'
+import { property_details } from '@/modules/properties/data/propertyDetails.js'
+
+
 const props = defineProps({
-  text: {
-    type: String,
-    default: ""
+  id: {
+    type: [Number, String],
+    required: true
   }
 })
-
 
 const showModal = ref(false)
 
 
-const isLong = computed(() => {
-  return props.text && props.text.length > 400
+const finalDescription = computed(() => {
+  const propertyId = Number(props.id);
+  const base = properties.find(p => p.id === propertyId);
+  const detail = property_details.find(d => d.propertyId === propertyId);
+
+
+  return detail?.extendedDescription || base?.description || "Sin descripción disponible.";
 })
 
+
+const isLong = computed(() => {
+  return finalDescription.value && finalDescription.value.length > 300
+})
 
 function openModal(){
   showModal.value = true
@@ -31,12 +43,11 @@ function closeModal(){
 
 <template>
   <div class="description-card">
-
     <h3>Descripción del sitio</h3>
 
     <div class="text-container">
       <p class="description-text">
-        {{ text }}
+        {{ finalDescription }}
       </p>
     </div>
 
@@ -48,7 +59,6 @@ function closeModal(){
       Ver más
     </button>
 
-  
     <div 
       v-if="showModal"
       class="modal-overlay"
@@ -58,19 +68,16 @@ function closeModal(){
         class="modal"
         @click.stop
       >
-
         <div class="modal-header">
           <h3>Descripción del sitio</h3>
           <button class="close" @click="closeModal">✕</button>
         </div>
 
         <div class="modal-body">
-          <p>{{ text }}</p>
+          <p>{{ finalDescription }}</p>
         </div>
-
       </div>
     </div>
-
   </div>
 </template>
 
@@ -80,19 +87,17 @@ function closeModal(){
   margin-top: 20px;
   max-width: 600px;
 }
-
 .description-card h3{
-  font-family: 'Poppins-Medium';
+ font-family:'Poppins-Regular';
+  font-size: 18px;
   color: #484769;
   margin-bottom: 10px;
+  font-weight: 500;
 }
-
-
 .text-container{
   max-height: 200px; 
   overflow: hidden;
 }
-
 .description-text{
   font-family: 'Poppins-Regular';
   color: #484769;
@@ -100,8 +105,6 @@ function closeModal(){
   line-height: 1.7;
   font-size: 15px;
 }
-
-
 .toggle-btn{
   margin-top: 10px;
   background: #FC8312;
@@ -117,8 +120,6 @@ function closeModal(){
 .toggle-btn:hover{
   background: #c55408;
 }
-
-
 .modal-overlay{
   position: fixed;
   top: 0;
@@ -131,8 +132,6 @@ function closeModal(){
   justify-content: center;
   z-index: 999;
 }
-
-
 .modal{
   width: 600px;
   max-height: 80vh;
@@ -142,34 +141,26 @@ function closeModal(){
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-
-
 .modal::-webkit-scrollbar{
   width: 0;
   background: transparent;
 }
-
-
 .modal-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
 }
-
 .modal-header h3{
   font-family: 'Poppins-Medium';
   color: #484769;
 }
-
-
 .close{
   background: none;
   border: none;
   font-size: 18px;
   cursor: pointer;
 }
-
 .modal-body p{
   font-family: 'Poppins-Regular';
   color: #484769;

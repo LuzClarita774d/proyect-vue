@@ -43,7 +43,7 @@ const emit = defineEmits(['select'])
 
 .thumb-wrapper.active {
   opacity: 1;
-  box-shadow: 0 0 0 3px #7A73B7; 
+  
 }
 
 .thumb-img {

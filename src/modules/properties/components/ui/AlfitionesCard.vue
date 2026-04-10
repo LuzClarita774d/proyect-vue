@@ -65,7 +65,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
-/* Contenedor Principal */
+
 .alfition-card {
   background-color: #f9f9f9;
   border: 1px solid #dedede;
@@ -76,7 +76,6 @@ const props = defineProps({
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Fila Superior */
 .top-row {
   display: flex;
   justify-content: space-between;
@@ -114,7 +113,6 @@ const props = defineProps({
   font-size: 12px;
 }
 
-/* Líneas Separadoras */
 .separator-line {
   border: 0;
   border-top: 1px solid #ADADB2;
@@ -127,7 +125,6 @@ const props = defineProps({
   margin: 12px 0;
 }
 
-/* Cuerpo de la Card */
 .alfition-body {
   display: flex;
   gap: 20px;
@@ -163,7 +160,6 @@ const props = defineProps({
   opacity: 0.9;
 }
 
-/* Columna Derecha */
 .right-column {
   flex: 1;
 }

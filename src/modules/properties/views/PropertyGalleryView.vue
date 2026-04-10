@@ -21,8 +21,8 @@ const volverAtras = () => {
   <div class="gallery-view">
     
     <header class="gallery-header">
-<button class="btn-volver" @click="volverAtras">
-  <img src="@/assets/imagenes/logos/flecla.svg" alt="Volver" class="icon-back" />
+<button class="volver" @click="volverAtras">
+  <img src="@/assets/imagenes/logos/flecla.svg" alt="Volver" class="fleca" />
   Volver
 </button>
       
@@ -30,7 +30,7 @@ const volverAtras = () => {
       
       <div class="info-meta">
         <span class="rating">
-          <img src="@/assets/imagenes/logos/estrella.svg" class="mini-star" />
+          <img src="@/assets/imagenes/logos/starnaranja.svg" class="mini" />
           {{ propiedad?.rating }}
         </span>
         <span class="divider">•</span>
@@ -65,7 +65,7 @@ const volverAtras = () => {
   margin-bottom: 30px;
 }
 
-.btn-volver {
+.volver {
   background: none;
   border: none;
   padding: 8px 0; 
@@ -81,19 +81,20 @@ const volverAtras = () => {
 
 }
 
-.icon-back {
+.fleca {
   width: 22px; 
   height: auto;
   transition: transform 0.3s ease;
   display: block; 
+   filter: brightness(0) saturate(100%) invert(49%) sepia(94%) saturate(2000%) hue-rotate(1deg) brightness(101%) contrast(101%);
 }
 
-.btn-volver:hover {
-  color: #fd3b00; 
+.volver:hover {
+  color: #ee6b43; 
 }
 
 
-.btn-volver:hover .icon-back {
+.volver:hover .fleca {
   transform: translateX(-5px); 
 }
 
@@ -113,7 +114,7 @@ const volverAtras = () => {
   margin-top: 5px;
 }
 
-.mini-star {
+.mini {
   width: 14px;
   margin-right: 4px;
 }
