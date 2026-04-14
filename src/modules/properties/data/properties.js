@@ -8,8 +8,10 @@ export const properties = [
     "type": "hotel",
     "price": 5400,
     "maxGuests": 2,
+    "hostId": 2, 
+    "Habitaciones": 1, 
+    "Baños": 1
   },
-  
   {
     "id": 3,
     "rating": 4.7,
@@ -21,39 +23,7 @@ export const properties = [
     "maxGuests": 4,
     "Habitaciones": 3,
     "Baños": 2,
-    
-    "host": {
-      "id": 101,
-      "name": "Judd Stephens",
-      "image": "https://randomuser.me/api/portraits/men/18.jpg",
-      "joinedDate": "Mayo 2024",
-      "responseTime": " en menos de una hora",
-      "telefono": "(422) 585-9895",
-      "correo": "judd.stephens@example.com",
-      "estudios": "URT",
-      "descripcion": "Me encanta bailar y el arte contemporáneo, donde movimiento y creatividad expresan emociones profundas.",
-      "responseRate": "100%",
-      "rating": 4.9,
-      "totalReviews": 128,
-      "languages": ["Español", "Inglés"]
-    },
-    "evaluaciones": [
-      {
-        "id": 1,
-        "usuario": "Mariana",
-        "fecha": "Febrero 2026",
-        "comentario": "El lugar es impecable y la atención de Judd fue de primer nivel. La laguna es increíble.",
-        "puntuacion": 5
-      },
-      {
-        "id": 2,
-        "usuario": "Carlos",
-        "fecha": "Enero 2026",
-        "comentario": "Excelente ubicación y muy seguro. Ideal para ir con la familia.",
-        "puntuacion": 4.5
-      }
-    ],
-    
+    "hostId": 3, 
   },
   {
     "id": 4,
@@ -64,7 +34,9 @@ export const properties = [
     "type": "casa",
     "price": 15500,
     "maxGuests": 8,
-
+    "Habitaciones": 5,
+    "Baños": 4,
+    "hostId": 4, 
   },
   {
     "id": 5,
