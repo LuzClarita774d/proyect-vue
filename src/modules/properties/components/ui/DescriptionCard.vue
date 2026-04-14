@@ -107,7 +107,7 @@ function closeModal(){
 }
 .toggle-btn{
   margin-top: 10px;
-  background: #FC8312;
+  background: #030566;
   border: none;
   color: white;
   font-weight: 500;
@@ -118,7 +118,7 @@ function closeModal(){
   transition: background 0.3s;
 }
 .toggle-btn:hover{
-  background: #c55408;
+  background: #ff7c01;
 }
 .modal-overlay{
   position: fixed;

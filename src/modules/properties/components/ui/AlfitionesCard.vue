@@ -1,17 +1,16 @@
 <template>
-  <div v-if="host" class="alfition-card">
+  <div v-if="hostData" class="alfition-card" @click="$emit('select', hostData.id)">
     <div class="top-row">
       <h2 class="anfitrion-title">Anfitrión</h2>
       <div class="stats-container">
         <div class="stat-item">
-          <span class="stat-number">{{ host.totalReviews }}</span>
+          <span class="stat-number">{{ hostData.totalReviews }}</span>
           <span class="stat-label">Evaluaciones</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">{{ host.rating }}</span>
+          <span class="stat-number">{{ hostData.rating }}</span>
           <span class="stat-label">Calificación</span>
         </div>
-
       </div>
     </div>
 
@@ -19,11 +18,11 @@
 
     <div class="alfition-body">
       <div class="left-column">
-        <img :src="host.image" alt="Foto del anfitrión" class="alfition-image" />
+        <img :src="hostData.image" alt="Foto del anfitrión" class="alfition-image" />
         <a 
-          :href="`https://wa.me/521998395961`" 
+          @click.stop
+          :href="`https://wa.me/${hostData.telefono.replace(/\D/g,'')}`" 
           target="_blank" 
-          rel="noopener noreferrer"
           class="alfition-button"
         >
           Escríbeme
@@ -31,22 +30,24 @@
       </div>
 
       <div class="right-column">
-        <h3 class="alfition-name">{{ host.name }}</h3>
+        <h3 class="alfition-name">{{ hostData.name }}</h3>
         
         <div class="contact-details">
           <p class="contact-item">
-            <span class="icon"><img src="@/assets/imagenes/logos/telefono.svg" alt=""></span> {{ host.telefono }}
+            <span class="icon"><img src="@/assets/imagenes/logos/telefono.svg" alt=""></span> 
+            {{ hostData.telefono }}
           </p>
           <p class="contact-item email">
-            <span class="icon"><img src="@/assets/imagenes/logos/correo.svg" alt=""</span> {{ host.correo }}
+            <span class="icon"><img src="@/assets/imagenes/logos/correo.svg" alt=""></span> 
+            {{ hostData.correo }}
           </p>
         </div>
 
         <hr class="inner-separator">
 
         <div class="bio-details">
-          <p><strong>Estudie:</strong> {{ host.estudios }}</p>
-          <p class="description"><strong>Sobre mi:</strong> {{ host.descripcion }}</p>
+          <p><strong>Estudió:</strong> {{ hostData.estudios }}</p>
+          <p class="description"><strong>Sobre mí:</strong> {{ hostData.descripcion }}</p>
         </div>
       </div>
     </div>
@@ -54,15 +55,25 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+import { computed, defineProps, defineEmits } from 'vue'
+import { getHostById } from'@/modules/properties/services/hostService'
 
 const props = defineProps({
-  host: {
-    type: Object,
+  // RECIBE SOLO EL ID DESDE EL PADRE
+  hostId: {
+    type: [Number, String],
     required: true
   }
 })
+
+const emit = defineEmits(['select'])
+
+// LÓGICA: El componente busca al anfitrión usando el ID que recibió
+const hostData = computed(() => {
+  return getHostById(props.hostId)
+})
 </script>
+
 
 <style scoped>
 

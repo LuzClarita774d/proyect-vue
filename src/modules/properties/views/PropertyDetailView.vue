@@ -25,6 +25,7 @@ const props = defineProps({
 const property = computed(() => {
   return getPropertyById(props.id)
 })
+
 function goToHostProfile(hostId) {
   router.push(`/host/${hostId}`)
 }
@@ -94,18 +95,20 @@ function goToCheckout(data){
 
 <AmenitySelector :id="id" />
 
-          <hr class="separator">
-
-  <div v-if="property.host" class="host-section">
-    <AlfitionesCard
-      :host="property.host"
-      @select="goToHostProfile"
-    />
-  </div>
       
 
+<hr class="separator-largo">
 
-      </div>
+<div v-if="property.hostId" class="host-section">
+  <AlfitionesCard
+    :hostId="property.hostId" 
+    @select="goToHostProfile"
+  />
+</div>
+
+
+
+</div>
 
       <ReservationCard 
         :property="property"

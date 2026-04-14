@@ -8,8 +8,8 @@ export const property_details = [
   {
     "propertyId": 3,
     "tagline": "Vida moderna con alma histórica.",
-    "extendedDescription": "Ubicado en el vibrante entorno de Puebla, este loft ofrece una experiencia única de amplitud y diseño. Ideal para grupos o familias, destaca por su acceso a una laguna cristalina artificial que redefine el concepto de playa urbana, combinando seguridad 24/7 con amenidades de primer nivel.",
-    "amenidadesid": [1, 2, 4, 8, 21, 23, 41, 61, 85, 102, 103, 121, 122]
+    "extendedDescription": "Ubicado en el vibrante entorno de Puebla, este loft ofrece una experiencia única de amplitud y diseño. Ideal para grupos o familias, destaca por su acceso a una laguna cristalina artificial que redefine el concepto de playa urbana, combinando seguridad 24/7 con amenidades de primer nivel ste loft ofrece una experiencia única de amplitud y diseño. Ideal para grupos o familias, destaca por su acceso a una laguna  ste loft ofrece una experiencia única de amplitud y diseño. Ideal para grupos o familias, destaca por su acceso a una laguna  ste loft ofrece una experiencia única de amplitud y diseño. Ideal para grupos o familias, destaca por su acceso a una laguna .",
+    "amenidadesid": [1, 2, 4,,5,6,7, 8, 21, 23, 41, 61, 85, 102, 103, 121, 122]
   },
   {
     "propertyId": 4,
