@@ -7,15 +7,11 @@ import ReservationCard from '@/modules/properties/components/ui/ReservationCard.
 import DescriptionCard from '@/modules/properties/components/ui/DescriptionCard.vue'
 import AlfitionesCard from '@/modules/properties/components/ui/AlfitionesCard.vue'
 import AmenitySelector from '@/modules/properties/components/ui/AmenitySelector.vue'
+import RatingStars from '@/modules/properties/components/ui/RatingStars.vue';
+
 const router = useRouter()
 
-
-/* Esto es de amenidades*/
 const props = defineProps({
-
-
-
-  
   id: {
     type: String,
     required: true
@@ -45,85 +41,116 @@ function goToCheckout(data){
 }
 </script>
 
-
-
-
-
 <template>
-
   <div v-if="property" class="detail">
-
-
-<Gallery 
-  :propertyId="property.id"
-  :rating="property.rating"
-/>
+    <Gallery 
+      :propertyId="property.id"
+      :rating="property.rating"
+    />
 
     <div class="content">
       <div class="info">
-<div class="property-container">
-  <div class="header-inline">
-    <h1 class="titulo">{{ property.name }}</h1>
-    <p class="tipo">{{ property.type }}</p>
-  </div>
+        <div class="property-container">
+          <div class="header-inline">
+            <h1 class="titulo">{{ property.name }}</h1>
+            <p class="tipo">{{ property.type }}</p>
+          </div>
 
-  <div class="icons">
-    <div class="icon-item">
-      <img src="@/assets/imagenes/logos/habitaciones.svg">
-      <span>{{ property.Habitaciones }} Habitaciones</span>
+          <div class="icons">
+            <div class="icon-item">
+              <img src="@/assets/imagenes/logos/habitaciones.svg">
+              <span>{{ property.Habitaciones }} Habitaciones</span>
+            </div>
+            <div class="icon-item">
+              <img src="@/assets/imagenes/logos/baños.svg">
+              <span>{{ property.Baños }} Baños</span>
+            </div>
+            <div class="icon-item">
+              <img src="@/assets/imagenes/logos/huespedes.svg">
+              <span>{{ property.maxGuests }} huéspedes máx.</span>
+            </div>
+          </div>
+          
+          <hr class="separator">
+        </div>
+
+        <div class="property-detail">
+          <DescriptionCard :id="props.id" />
+        </div>
+
+        <hr class="separator">
+        
+        <AmenitySelector :id="id" />
+
+        <hr class="separator">
+        
+        <div v-if="property.hostId" class="host-section">
+          <AlfitionesCard
+            :hostId="property.hostId" 
+            @select="goToHostProfile"
+          />
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <ReservationCard 
+          :property="property"
+          @reserve="goToCheckout"
+          class="sticky-card"
+        />
+      </aside>
     </div>
-    <div class="icon-item">
-      <img src="@/assets/imagenes/logos/baños.svg">
-      <span>{{ property.Baños }} Baños</span>
+
+    <div class="full-width-section">
+      <hr class="separator-largo">
+      <div class="rating-wrapper">
+        <RatingStars :propertyId="props.id" />
+        
+        
+      </div>
     </div>
-    <div class="icon-item">
-      <img src="@/assets/imagenes/logos/huespedes.svg">
-      <span>{{ property.maxGuests }} huéspedes máx.</span>
-    </div>
-  </div>
-  
-  <hr class="separator">
-</div>
 
-
-<div class="property-detail">
-    <DescriptionCard :id="props.id" />
-  </div>
-
- <hr class="separator">
-      
-
-<AmenitySelector :id="id" />
-
-      
-
-<hr class="separator-largo">
-
-<div v-if="property.hostId" class="host-section">
-  <AlfitionesCard
-    :hostId="property.hostId" 
-    @select="goToHostProfile"
-  />
-</div>
-
-
-
-</div>
-
-      <ReservationCard 
-        :property="property"
-        @reserve="goToCheckout"
-      />
-
-    </div>
   </div>
 </template>
 
-
-
-
 <style scoped>
+.detail {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
 
+.content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 80px;
+  margin-top: 30px;
+  align-items: flex-start;
+  margin-bottom: 50px; 
+}
+
+.sidebar {
+  position: relative;
+  height: 100%;
+}
+
+.sticky-card {
+  position: sticky;
+  top: 40px; 
+  z-index: 10;
+}
+
+.full-width-section {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.rating-wrapper {
+  max-width: 100%; 
+  margin: auto;
+}
+
+/* Estilos de Tipografía */
 .header-inline {
   display: flex;
   align-items: baseline; 
@@ -132,7 +159,7 @@ function goToCheckout(data){
 }
 
 .titulo {
-    font-family: 'Poppins-Medium';
+  font-family: 'Poppins-Medium';
   font-size: 40px; 
   color: #484769;
   margin: 0;
@@ -145,11 +172,6 @@ function goToCheckout(data){
   margin: 0;
 }
 
-.amenities-section {
-  margin: 40px 0;
-  padding: 20px;
-  border-top: 1px solid #eee; 
-}
 .icons {
   display: flex;
   gap: 40px; 
@@ -166,41 +188,26 @@ function goToCheckout(data){
 }
 
 .icon-item img {
-  width: 24px; 
-  height: auto;
+  width: 24px;
 }
 
 
 .separator {
   border: 0;
   border-top: 1px solid #ADADB2;
-  margin-top: 10px;
-  margin-left: 0;
-  width: 660px;
-  margin-right: auto;
-  
-}
-.detail {
-  max-width: 1200px;
-  margin: auto;
+  margin: 30px 0;
+  width: 100%;
+  max-width: 660px; 
 }
 
-.content {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 40px;
-  margin-top: 30px;
+.separator-largo {
+  border: 0;
+  border-top: 1px solid #ADADB2;
+  margin: 40px 0;
+  width: 100%; 
 }
 
-.icons {
-  display: flex;
-  gap: 20px;
-  margin: 10px 0;
+.host-section {
+  margin: 40px 0;
 }
-
-.icons img {
-  width: 18px;
-}
-
-
 </style>

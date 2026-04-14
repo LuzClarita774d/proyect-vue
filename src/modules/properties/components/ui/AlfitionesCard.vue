@@ -1,58 +1,3 @@
-<template>
-  <div v-if="hostData" class="alfition-card" @click="$emit('select', hostData.id)">
-    <div class="top-row">
-      <h2 class="anfitrion-title">Anfitrión</h2>
-      <div class="stats-container">
-        <div class="stat-item">
-          <span class="stat-number">{{ hostData.totalReviews }}</span>
-          <span class="stat-label">Evaluaciones</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">{{ hostData.rating }}</span>
-          <span class="stat-label">Calificación</span>
-        </div>
-      </div>
-    </div>
-
-    <hr class="separator-line">
-
-    <div class="alfition-body">
-      <div class="left-column">
-        <img :src="hostData.image" alt="Foto del anfitrión" class="alfition-image" />
-        <a 
-          @click.stop
-          :href="`https://wa.me/${hostData.telefono.replace(/\D/g,'')}`" 
-          target="_blank" 
-          class="alfition-button"
-        >
-          Escríbeme
-        </a>
-      </div>
-
-      <div class="right-column">
-        <h3 class="alfition-name">{{ hostData.name }}</h3>
-        
-        <div class="contact-details">
-          <p class="contact-item">
-            <span class="icon"><img src="@/assets/imagenes/logos/telefono.svg" alt=""></span> 
-            {{ hostData.telefono }}
-          </p>
-          <p class="contact-item email">
-            <span class="icon"><img src="@/assets/imagenes/logos/correo.svg" alt=""></span> 
-            {{ hostData.correo }}
-          </p>
-        </div>
-
-        <hr class="inner-separator">
-
-        <div class="bio-details">
-          <p><strong>Estudió:</strong> {{ hostData.estudios }}</p>
-          <p class="description"><strong>Sobre mí:</strong> {{ hostData.descripcion }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
 
 <script setup>
 import { computed, defineProps, defineEmits } from 'vue'
@@ -75,141 +20,154 @@ const hostData = computed(() => {
 </script>
 
 
+<template>
+  <div v-if="hostData" class="host-section-clean" @click="$emit('select', hostData.id)">
+    <div class="host-header">
+      <div class="image-container">
+        <img :src="hostData.image" alt="Anfitrión" class="host-avatar" />
+      </div>
+      <div class="host-intro">
+        <h2 class="host-name">{{ hostData.name }}</h2>
+        <div class="host-quick-stats">
+          <span class="stat-pill">{{ hostData.rating }} ★ Calificación</span>
+          <span class="stat-pill">{{ hostData.totalReviews }} Evaluaciones</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="host-contact-minimal">
+      <a 
+        @click.stop
+        :href="`https://wa.me/${hostData.telefono.replace(/\D/g,'')}`" 
+        target="_blank" 
+        class="contact-link"
+      >
+        <img src="@/assets/imagenes/logos/telefono.svg" alt="">
+        <span>{{ hostData.telefono }}</span>
+      </a>
+      <div class="contact-link">
+        <img src="@/assets/imagenes/logos/correo.svg" alt="">
+        <span>{{ hostData.correo }}</span>
+      </div>
+    </div>
+
+    <div class="host-details-list">
+      <div class="detail-group">
+        <label>Estudió:</label>
+        <p>{{ hostData.estudios }}</p>
+      </div>
+      <div class="detail-group">
+        <label>Sobre mí:</label>
+        <p>{{ hostData.descripcion }}</p>
+      </div>
+    </div>
+  </div>
+</template>
+
 <style scoped>
-
-.alfition-card {
-  background-color: #f9f9f9;
-  border: 1px solid #dedede;
-  border-radius: 15px;
-  padding: 25px;
-  max-width: 550px;
+/* Contenedor: Cero fondos, cero bordes. Solo espacio. */
+.host-section-clean {
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 660px;
+  padding: 20px 0;
+  cursor: pointer;
+  background: transparent;
 }
 
-.top-row {
+/* Header con aire */
+.host-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-}
-
-.anfitrion-title {
-  font-family: 'Poppins-Medium', sans-serif;
-  color: #484769;
-  font-size: 26px;
-  margin: 0;
-}
-
-.stats-container {
-  display: flex;
   gap: 20px;
-  text-align: center;
+  margin-bottom: 25px;
 }
 
-.stat-item {
-  display: flex;
-  flex-direction: column;
+.image-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
 }
 
-.stat-number {
-  font-family: 'Poppins-Medium', sans-serif;
-  color: #484769;
-  font-size: 16px;
-}
-
-.stat-label {
-  font-family: 'Poppins-Medium', sans-serif;
-  color: #484769;
-  font-size: 12px;
-}
-
-.separator-line {
-  border: 0;
-  border-top: 1px solid #ADADB2;
-  margin: 15px 0;
-}
-
-.inner-separator {
-  border: 0;
-  border-top: 1px solid #ADADB2;
-  margin: 12px 0;
-}
-
-.alfition-body {
-  display: flex;
-  gap: 20px;
-}
-
-.left-column {
-  display: flex;
-  flex-direction: column;
-  width: 130px;
-  gap: 15px;
-}
-
-.alfition-image {
-  width: 130px;
-  height: 130px;
-  border-radius: 10px;
+.host-avatar {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.alfition-button {
-  background-color: #FC8312;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  padding: 10px 0;
-  border-radius: 8px;
-  font-family: 'Poppins-Medium', sans-serif;
-  font-size: 14px;
-  transition: opacity 0.2s;
-}
-
-.alfition-button:hover {
-  opacity: 0.9;
-}
-
-.right-column {
-  flex: 1;
-}
-
-.alfition-name {
-  font-family: 'Poppins-Medium', sans-serif;
+.host-name {
+  font-family:'Poppins-Regular';
+  font-size: 18px;
   color: #484769;
-  font-size: 24px;
-  margin: 0 0 10px 0;
+  margin: 0;
+  font-weight: 500;
 }
 
-.contact-item {
-  font-family: 'Poppins-Regular', sans-serif;
-  color: #484769;
-  font-size: 16px;
-  margin: 4px 0;
+.host-quick-stats {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.stat-pill {
+ font-family:'Poppins-Regular';
+  font-size: 13px;
+  color: #67668C;
+}
+
+/* Contacto: Links sutiles */
+.host-contact-minimal {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.contact-link {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.email {
-  text-decoration: underline;
-  font-size: 15px;
-}
-
-.bio-details p {
+  text-decoration: none;
   font-family: 'Poppins-Regular', sans-serif;
-  color: #484769;
   font-size: 14px;
-  line-height: 1.4;
-  margin: 6px 0;
+  color: #484769;
 }
 
-.bio-details strong {
+.contact-link img {
+  width: 16px;
+  opacity: 0.6;
+}
+
+.contact-link:hover span {
+  color: #FC8312; /* Tu toque de color naranja solo al interactuar */
+}
+
+/* LISTADO ORDENADO: Lo que pediste */
+.host-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-group label {
+  display: block;
   font-family: 'Poppins-Medium', sans-serif;
+  font-size: 15px;
+  color: #152644;
+  margin-bottom: 4px;
 }
 
-.description {
-  margin-top: 10px;
+.detail-group p {
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 15px;
+  color: #67668C;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Una línea divisoria muy tenue para separar del resto de la página */
+.host-section-clean {
+  border-bottom: 1px solid #f3f3f3;
+  padding-bottom: 40px;
 }
 </style>
