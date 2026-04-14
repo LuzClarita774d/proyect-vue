@@ -84,7 +84,7 @@ function closeModal(){
 <style scoped>
 
 .description-card{
-  margin-top: 20px;
+  margin-top: 18px;
   max-width: 600px;
 }
 .description-card h3{
@@ -100,7 +100,7 @@ function closeModal(){
 }
 .description-text{
   font-family: 'Poppins-Regular';
-  color: #484769;
+  color: #67668C;
   text-align: justify;
   line-height: 1.7;
   font-size: 15px;
