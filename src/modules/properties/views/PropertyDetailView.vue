@@ -8,6 +8,7 @@ import DescriptionCard from '@/modules/properties/components/ui/DescriptionCard.
 import AlfitionesCard from '@/modules/properties/components/ui/AlfitionesCard.vue'
 import AmenitySelector from '@/modules/properties/components/ui/AmenitySelector.vue'
 import RatingStars from '@/modules/properties/components/ui/RatingStars.vue';
+import Reglamentos from '@/modules/properties/components/ui/Reglamentos.vue';
 
 const router = useRouter()
 
@@ -105,6 +106,12 @@ function goToCheckout(data){
       <hr class="separator-largo">
       <div class="rating-wrapper">
         <RatingStars :propertyId="props.id" />
+          
+
+
+<section class="section-container">
+  <Reglamentos :propertyId="props.id" />
+</section>
         
         
       </div>

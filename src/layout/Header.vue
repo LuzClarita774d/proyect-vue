@@ -1,3 +1,11 @@
+
+<script>
+export default {
+  name: "Header"
+}
+</script>
+
+
 <template>
     <header class="header">
 
@@ -22,11 +30,6 @@
    
 
 
-<script>
-export default {
-  name: "Header"
-}
-</script>
 
 
 <style scoped>

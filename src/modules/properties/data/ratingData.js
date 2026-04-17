@@ -1,5 +1,3 @@
-// src/modules/properties/data/ratingData.js
-
 export const ratings = [
   {
     propertyId: "3",

@@ -155,7 +155,7 @@ const seleccionarCategoria = (key) => {
   min-width: 200px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 15px 35px rgba(72, 71, 105, 0.15); /* Sombra con el color de tu marca */
+  box-shadow: 0 15px 35px rgba(72, 71, 105, 0.15); 
   z-index: 50;
   list-style: none;
   padding: 10px 0;
