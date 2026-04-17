@@ -26,7 +26,7 @@ export const hostsData = [
     estudios: "Lic. en Gastronomía - UT",
     descripcion: "Chef de profesión y apasionada por la cultura maya. Te daré las mejores recomendaciones culinarias de la zona.",
     responseRate: "98%",
-    rating: 4.8,
+    rating: 4.2,
     totalReviews: 85,
     languages: ["Español", "Francés"]
   },

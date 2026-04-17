@@ -1,3 +1,39 @@
+<script setup>
+
+import { ref } from "vue"
+import { useRouter } from "vue-router"
+
+import DestinationInput from "@/modules/properties/components/search/DestinationInput.vue"
+import DatePicker from "@/modules/properties/components/search/DatePicker.vue"
+import GuestsSelector from "@/modules/properties/components/search/GuestsSelector.vue"
+
+const router = useRouter()
+
+const destination = ref("")
+const checkIn = ref("")
+const checkOut = ref("")
+const guests = ref(1)
+
+function search(){
+
+router.push({
+
+name:"results",
+
+query:{
+destination: destination.value,
+checkIn: checkIn.value,
+checkOut: checkOut.value,
+guests: guests.value
+}
+
+})
+
+}
+
+</script>
+
+
 <template>
 
 <div class="hero">
@@ -48,40 +84,7 @@
 </template>
 
 
-<script setup>
 
-import { ref } from "vue"
-import { useRouter } from "vue-router"
-
-import DestinationInput from "@/modules/properties/components/search/DestinationInput.vue"
-import DatePicker from "@/modules/properties/components/search/DatePicker.vue"
-import GuestsSelector from "@/modules/properties/components/search/GuestsSelector.vue"
-
-const router = useRouter()
-
-const destination = ref("")
-const checkIn = ref("")
-const checkOut = ref("")
-const guests = ref(1)
-
-function search(){
-
-router.push({
-
-name:"results",
-
-query:{
-destination: destination.value,
-checkIn: checkIn.value,
-checkOut: checkOut.value,
-guests: guests.value
-}
-
-})
-
-}
-
-</script>
 
 
 <style scoped>
@@ -133,7 +136,7 @@ overflow:visible;
 width:100%;
 height:100%;
 object-fit:cover;
-border-radius:0 0 0px 0px;
+border-radius:0 0 80px 80px;
 display:block;
 }
 

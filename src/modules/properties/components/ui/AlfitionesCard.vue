@@ -1,4 +1,3 @@
-
 <script setup>
 import { computed, defineProps, defineEmits } from 'vue'
 import { getHostById } from'@/modules/properties/services/hostService'
@@ -13,7 +12,6 @@ const props = defineProps({
 
 const emit = defineEmits(['select'])
 
-// LÓGICA: El componente busca al anfitrión usando el ID que recibió
 const hostData = computed(() => {
   return getHostById(props.hostId)
 })
@@ -65,7 +63,7 @@ const hostData = computed(() => {
 </template>
 
 <style scoped>
-/* Contenedor: Cero fondos, cero bordes. Solo espacio. */
+
 .host-section-clean {
   width: 100%;
   max-width: 660px;
@@ -74,7 +72,7 @@ const hostData = computed(() => {
   background: transparent;
 }
 
-/* Header con aire */
+
 .host-header {
   display: flex;
   align-items: center;
@@ -116,7 +114,7 @@ const hostData = computed(() => {
   color: #67668C;
 }
 
-/* Contacto: Links sutiles */
+
 .host-contact-minimal {
   display: flex;
   gap: 30px;
@@ -139,10 +137,10 @@ const hostData = computed(() => {
 }
 
 .contact-link:hover span {
-  color: #FC8312; /* Tu toque de color naranja solo al interactuar */
+  color: #FC8312; 
 }
 
-/* LISTADO ORDENADO: Lo que pediste */
+
 .host-details-list {
   display: flex;
   flex-direction: column;
@@ -153,7 +151,7 @@ const hostData = computed(() => {
   display: block;
   font-family: 'Poppins-Medium', sans-serif;
   font-size: 15px;
-  color: #152644;
+ color: #484769; 
   margin-bottom: 4px;
 }
 
@@ -165,7 +163,7 @@ const hostData = computed(() => {
   margin: 0;
 }
 
-/* Una línea divisoria muy tenue para separar del resto de la página */
+
 .host-section-clean {
   border-bottom: 1px solid #f3f3f3;
   padding-bottom: 40px;

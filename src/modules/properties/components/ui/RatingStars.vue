@@ -138,24 +138,43 @@ width: 30px;
 opacity: 0.5;
  }
 
-/* DISEÑO DE EVALUACIONES: Pura tipografía y espacio */
 .evaluations-container { 
     margin-top: 70px;
  }
 .evaluations-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px 80px; /* Mucho aire entre columnas y filas */
+  gap: 50px 80px;
 }
 
 .eval-item {
-  background: transparent; /* Cero fondos */
+  background: transparent; 
 }
 
-.user-profile { display: flex; align-items: center; gap: 15px; margin-bottom: 18px; }
-.avatar-img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
-.name { font-family: 'Poppins-Medium'; font-size: 16px; color: #152644; margin: 0; }
-.city-date { font-family: 'Poppins-Regular'; font-size: 13px; color: #ADADB2; margin: 0; }
+.user-profile { 
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  margin-bottom: 18px; }
+.avatar-img { 
+  width: 48px; 
+  height: 48px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+}
+.name { 
+  font-family: 'Poppins-Medium'; 
+  font-size: 16px; 
+color: #484769; 
+  
+  margin: 0; 
+}
+.city-date { 
+  font-family: 'Poppins-Regular'; 
+  font-size: 13px; 
+  color: #ADADB2; 
+  margin: 0; 
+}
 
 .eval-comment {
   font-family: 'Poppins-Regular';
@@ -165,8 +184,10 @@ opacity: 0.5;
   margin: 0;
 }
 
-/* Link sutil en lugar de botón */
-.load-more-box { margin-top: 60px; text-align: left; }
+
+.load-more-box { 
+  margin-top: 60px; 
+  text-align: left; }
 .link-show-more {
   border: none;
   background: transparent;
@@ -179,6 +200,6 @@ opacity: 0.5;
   transition: color 0.2s ease;
 }
 .link-show-more:hover {
-  color: #FC8312; /* Tu toque de color naranja solo al interactuar */
+  color: #FC8312; 
 }
 </style>
