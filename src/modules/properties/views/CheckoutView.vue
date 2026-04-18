@@ -2,6 +2,7 @@
 import { useRoute } from "vue-router"
 import { ref, computed } from "vue"
 
+
 const route = useRoute()
 const reservation = route.query
 
@@ -89,7 +90,7 @@ function handlePayment(){
               <input type="radio" v-model="paymentMethod" value="credit">
               <span class="circle"></span>
               <span class="text">Tarjeta de Crédito/Débito</span>
-              <img :src="cardIcon" alt="card" class="card-logo" />
+            <img src="../../../assets/imagenes/logos/card.png" alt="card" class="card-logo" />
             </label>
           </div>
         </div>
