@@ -47,6 +47,7 @@ export const properties = [
     "type": "hotel",
     "price": 3800,
     "maxGuests": 4,
+      "hostId": 5, 
 
   },
   {
@@ -58,7 +59,7 @@ export const properties = [
     "type": "casa",
     "price": 7500,
     "maxGuests": 6,
-
+  "hostId": 6, 
   },
   {
     "id": 7,
@@ -69,7 +70,7 @@ export const properties = [
     "type": "departamento",
     "price": 3200,
     "maxGuests": 5,
-
+  "hostId": 7, 
   },
   {
     "id": 8,
@@ -79,8 +80,8 @@ export const properties = [
     "location": "Oaxaca",
     "type": "hotel",
     "price": 6100,
-    "maxGuests": 2,
-
+    "maxGuests": 8,
+  "hostId": 8, 
   },
   {
     "id": 9,
@@ -91,7 +92,7 @@ export const properties = [
     "type": "departamento",
     "price": 1800,
     "maxGuests": 4,
-
+  "hostId": 9, 
   },
   {
     "id": 10,
@@ -102,7 +103,7 @@ export const properties = [
     "type": "casa",
     "price": 12000,
     "maxGuests": 4,
-
+  "hostId": 10, 
   },
   {
     "id": 11,
@@ -113,7 +114,7 @@ export const properties = [
     "type": "hotel",
     "price": 9500,
     "maxGuests": 3,
-
+  "hostId": 11, 
   },
   {
     "id": 12,
@@ -124,7 +125,7 @@ export const properties = [
     "type": "departamento",
     "price": 5500,
     "maxGuests": 2,
-
+  "hostId":12 , 
   },
   {
     "id": 13,
@@ -135,7 +136,7 @@ export const properties = [
     "type": "hotel",
     "price": 3200,
     "maxGuests": 6,
-
+ "hostId":13 , 
   },
   {
     "id": 14,
@@ -146,7 +147,7 @@ export const properties = [
     "type": "casa",
     "price": 8700,
     "maxGuests": 4,
-
+ "hostId": 14, 
   },
   {
     "id": 15,
@@ -157,7 +158,7 @@ export const properties = [
     "type": "hotel",
     "price": 1850,
     "maxGuests": 4,
-
+ "hostId": 15, 
   },
   {
     "id": 16,
@@ -168,7 +169,7 @@ export const properties = [
     "type": "departamento",
     "price": 2800,
     "maxGuests": 2,
-
+ "hostId":16 , 
   },
   {
     "id": 17,
@@ -179,7 +180,7 @@ export const properties = [
     "type": "hotel",
     "price": 2700,
     "maxGuests": 5,
-
+ "hostId":17 , 
   },
   {
     "id": 18,
@@ -190,7 +191,7 @@ export const properties = [
     "type": "casa",
     "price": 18000,
     "maxGuests": 10,
-
+ "hostId":18 , 
   },
   {
     "id": 19,
@@ -201,7 +202,7 @@ export const properties = [
     "type": "departamento",
     "price": 1950,
     "maxGuests": 4,
-
+ "hostId":19 , 
   },
   {
     "id": 20,
@@ -212,7 +213,7 @@ export const properties = [
     "type": "hotel",
     "price": 11500,
     "maxGuests": 4,
-
+ "hostId": 20, 
   },
   {
     "id": 21,
