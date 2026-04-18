@@ -1,58 +1,52 @@
 import { properties } from "../data/properties"
+import { DISPONIBILIDAD_DATA } from "../data/disponibilidad" // <--- Importamos la nueva data
 
 /* OBTENER PROPIEDAD POR ID */
 export function getPropertyById(id){
   return properties.find(property => property.id == id)
 }
 
-/* BUSQUEDA DE PROPIEDADES */
+/* BUSQUEDA DE PROPIEDADES CORREGIDA */
 export function searchProperties(filters){
-
   return properties.filter(property => {
-
+    
+    // 1. FILTRO DE DESTINO
     const destination = filters.destination?.toLowerCase() || ""
-
-    /* DESTINO */
     const destinationMatch =
       !destination ||
       property.city.toLowerCase().includes(destination) ||
       property.location.toLowerCase().includes(destination)
 
-    /* HUÉSPEDES */
-    const guestsMatch =
-      property.maxGuests >= filters.guests
+    // 2. FILTRO DE HUÉSPEDES
+    const guestsMatch = property.maxGuests >= (filters.guests || 1)
 
-  
+    // 3. FILTRO DE FECHAS (CONECTADO A DISPONIBILIDAD_DATA)
     let dateMatch = true
-
-    /* FECHAS */
     if(filters.checkIn && filters.checkOut){
-
       const start = new Date(filters.checkIn)
       const end = new Date(filters.checkOut)
+      
+      // Buscamos la info de esta propiedad en el calendario global
+      const info = DISPONIBILIDAD_DATA.find(d => d.propertyId === property.id)
+      
+      if (!info) {
+        dateMatch = false // Si no hay info de disponibilidad, por seguridad no la mostramos
+      } else {
+        // La propiedad NO es apta si existe algún bloque "ocupado" que se cruce con las fechas del usuario
+        const tieneBloqueo = info.calendario.some(bloque => {
+          if (bloque.estado === 'libre') return false; // Si está libre, no nos estorba
 
-      const nights =
-        Math.ceil((end - start) / (1000 * 60 * 60 * 24))
+          const bInicio = new Date(bloque.inicio)
+          const bFin = new Date(bloque.fin)
 
-      dateMatch = property.availability?.some(range => {
+          // Lógica de traslape: (InicioA <= FinB) Y (FinA >= InicioB)
+          return start <= bFin && end >= bInicio
+        })
 
-        const availableStart = new Date(range.from)
-        const availableEnd = new Date(range.to)
-
-        const withinRange =
-          start >= availableStart &&
-          end <= availableEnd
-
-        const enoughNights =
-          (availableEnd - availableStart) / (1000 * 60 * 60 * 24) >= nights
-
-        return withinRange && enoughNights
-
-      }) || false
+        dateMatch = !tieneBloqueo // Si no tiene bloqueos, dateMatch es true
+      }
     }
 
     return destinationMatch && guestsMatch && dateMatch
-
   })
-
 }
