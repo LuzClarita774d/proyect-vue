@@ -8,6 +8,8 @@ import Footer from './Footer.vue'
 
 const route = useRoute()
 
+const isLoginPage = computed(() => route.name === 'login')
+
 const showDefaultHeader = computed(() =>
   route.name === 'home' || route.name === 'property'
 )
@@ -21,12 +23,14 @@ const showSearchHeader = computed(() =>
 
 <div>
 
-  <Header v-if="showDefaultHeader" />
-  <HeaderSearch v-else-if="showSearchHeader" />
+  <template v-if="!isLoginPage">
+    <Header v-if="showDefaultHeader" />
+    <HeaderSearch v-else-if="showSearchHeader" />
+  </template>
 
   <router-view />
 
-  <Footer />
+  <Footer v-if="!isLoginPage" />
 
 </div>
 
